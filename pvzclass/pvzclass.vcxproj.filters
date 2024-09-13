@@ -28,6 +28,9 @@
     <Filter Include="头文件\Events">
       <UniqueIdentifier>{6d9c9fad-ad6b-4df6-b7c7-d49334f8b109}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Board">
+      <UniqueIdentifier>{12015496-e1b9-440e-9dc3-84bd93d174b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -580,6 +583,9 @@
     </ClInclude>
     <ClInclude Include="Enums\UpperSoundType.h">
       <Filter>头文件\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\BoardUpdateGameEvent.hpp">
+      <Filter>头文件\Events\Board</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

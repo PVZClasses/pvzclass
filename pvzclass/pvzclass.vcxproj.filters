@@ -31,6 +31,9 @@
     <Filter Include="头文件\Events\Board">
       <UniqueIdentifier>{12015496-e1b9-440e-9dc3-84bd93d174b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Challenge">
+      <UniqueIdentifier>{8205a029-2acd-42ab-b0e5-e4c7e58cb206}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -154,9 +157,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Events\EventHandler.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Events\PuzzlePhaseCompleteEvent.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Events\VaseOpenEvent.cpp">
@@ -503,9 +503,6 @@
     <ClInclude Include="Events\ProjectileRemoveEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Events\PuzzlePhaseCompleteEvent.h">
-      <Filter>头文件\Events</Filter>
-    </ClInclude>
     <ClInclude Include="Events\SeedCardClickEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
@@ -586,6 +583,9 @@
     </ClInclude>
     <ClInclude Include="Events\BoardUpdateGameEvent.hpp">
       <Filter>头文件\Events\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PuzzlePhaseCompleteEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

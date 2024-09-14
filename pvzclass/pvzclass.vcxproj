@@ -232,7 +232,6 @@
     <ClCompile Include="Events\BaseEvent.cpp" />
     <ClCompile Include="Events\EventHandler.cpp" />
     <ClCompile Include="Events\PlantSquishEvent.cpp" />
-    <ClCompile Include="Events\PuzzlePhaseCompleteEvent.cpp" />
     <ClCompile Include="Events\ImitaterPlantEvent.cpp" />
     <ClCompile Include="ProcessOpener.cpp" />
     <ClCompile Include="Classes\Projectile.cpp" />
@@ -268,7 +267,7 @@
     <ClInclude Include="Events\TemplateEvent.h" />
     <ClInclude Include="Events\EventHandler.h" />
     <ClInclude Include="Events\ProjectileCreateEvent.h" />
-    <ClInclude Include="Events\PuzzlePhaseCompleteEvent.h" />
+    <ClInclude Include="Events\PuzzlePhaseCompleteEvent.hpp" />
     <ClInclude Include="Events\UpdateAppEvent.h" />
     <ClInclude Include="Events\ZombieEatEvent.h" />
     <ClInclude Include="Events\ZombieHitEvent.h" />

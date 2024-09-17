@@ -34,6 +34,9 @@
     <Filter Include="头文件\Events\Challenge">
       <UniqueIdentifier>{8205a029-2acd-42ab-b0e5-e4c7e58cb206}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Lawnmower">
+      <UniqueIdentifier>{faa47763-e693-44c8-8ebc-978f6cbe51e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -586,6 +589,9 @@
     </ClInclude>
     <ClInclude Include="Events\PuzzlePhaseCompleteEvent.hpp">
       <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\LawnmowerStartEvent.hpp">
+      <Filter>头文件\Events\Lawnmower</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

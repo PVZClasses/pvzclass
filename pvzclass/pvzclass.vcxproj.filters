@@ -596,5 +596,8 @@
     <ClInclude Include="Events\IZLevelCompleteEvent.hpp">
       <Filter>头文件\Events\Challenge</Filter>
     </ClInclude>
+    <ClInclude Include="Events\IZLevelStartAfterEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

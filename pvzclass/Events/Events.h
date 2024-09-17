@@ -8,6 +8,7 @@
 #include "DrawUITopEvent.h"
 #include "DrawPlantReanimEvent.h"
 #include "DrawZombieReanimEvent.h"
+#include "IZLevelCompleteEvent.hpp"
 #include "LawnmowerStartEvent.hpp"
 #include "NewGameEvent.h"
 #include "PlantCreateEvent.h"

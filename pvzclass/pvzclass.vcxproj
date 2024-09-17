@@ -262,6 +262,7 @@
     <ClInclude Include="Events\DialogDrawEvent.h" />
     <ClInclude Include="Events\DLLEvent.h" />
     <ClInclude Include="Events\Events.h" />
+    <ClInclude Include="Events\IZLevelCompleteEvent.hpp" />
     <ClInclude Include="Events\LawnmowerStartEvent.hpp" />
     <ClInclude Include="Events\NewGameEvent.h" />
     <ClInclude Include="Events\PlantSquishEvent.h" />

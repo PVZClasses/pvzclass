@@ -98,7 +98,7 @@ namespace PVZ
 		static bool localExecute;
 		static int DLLAddress;
 		template <class T>
-		inline static T ReadMemory(int address)
+		inline static T ReadMemory(DWORD address)
 		{
 			if (localExecute)
 			{
@@ -113,7 +113,7 @@ namespace PVZ
 			}
 		};
 		template <class T>
-		inline static BOOL WriteMemory(int address, T value)
+		inline static BOOL WriteMemory(DWORD address, T value)
 		{
 			if (localExecute)
 			{
@@ -128,7 +128,7 @@ namespace PVZ
 			}
 		};
 		template <class T>
-		inline static BOOL ReadArray(int address, T* result, size_t length)
+		inline static BOOL ReadArray(DWORD address, T* result, size_t length)
 		{
 			if (localExecute)
 			{
@@ -141,7 +141,7 @@ namespace PVZ
 			}
 		};
 		template <class T>
-		inline static BOOL WriteArray(int address, T* value, size_t length)
+		inline static BOOL WriteArray(DWORD address, T* value, size_t length)
 		{
 			if (localExecute)
 			{

@@ -232,7 +232,6 @@
     <ClCompile Include="Events\BaseEvent.cpp" />
     <ClCompile Include="Events\EventHandler.cpp" />
     <ClCompile Include="Events\PlantSquishEvent.cpp" />
-    <ClCompile Include="Events\PuzzlePhaseCompleteEvent.cpp" />
     <ClCompile Include="Events\ImitaterPlantEvent.cpp" />
     <ClCompile Include="ProcessOpener.cpp" />
     <ClCompile Include="Classes\Projectile.cpp" />
@@ -249,6 +248,7 @@
     <ClInclude Include="Classes\ChallengeScreen.hpp" />
     <ClInclude Include="Classes.hpp" />
     <ClInclude Include="Draw.h" />
+    <ClInclude Include="Events\BoardUpdateGameEvent.hpp" />
     <ClInclude Include="Events\DrawPlantReanimEvent.h" />
     <ClInclude Include="Events\DrawZombieReanimEvent.h" />
     <ClInclude Include="Enums\ChallengePage.hpp" />
@@ -262,12 +262,16 @@
     <ClInclude Include="Events\DialogDrawEvent.h" />
     <ClInclude Include="Events\DLLEvent.h" />
     <ClInclude Include="Events\Events.h" />
+    <ClInclude Include="Events\IZLevelCompleteEvent.hpp" />
+    <ClInclude Include="Events\IZLevelStartAfterEvent.hpp" />
+    <ClInclude Include="Events\IZScoreBrainEvent.hpp" />
+    <ClInclude Include="Events\LawnmowerStartEvent.hpp" />
     <ClInclude Include="Events\NewGameEvent.h" />
     <ClInclude Include="Events\PlantSquishEvent.h" />
     <ClInclude Include="Events\TemplateEvent.h" />
     <ClInclude Include="Events\EventHandler.h" />
     <ClInclude Include="Events\ProjectileCreateEvent.h" />
-    <ClInclude Include="Events\PuzzlePhaseCompleteEvent.h" />
+    <ClInclude Include="Events\PuzzlePhaseCompleteEvent.hpp" />
     <ClInclude Include="Events\UpdateAppEvent.h" />
     <ClInclude Include="Events\ZombieEatEvent.h" />
     <ClInclude Include="Events\ZombieHitEvent.h" />

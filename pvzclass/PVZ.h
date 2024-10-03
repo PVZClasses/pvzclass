@@ -646,6 +646,8 @@ namespace PVZ
 		INT_PROPERTY(AttributeCountdown, __get_AttributeCountdown, __set_AttributeCountdown, 0x54);
 		INT_PROPERTY(ShootOrProductCountdown, __get_ShootOrProductCountdown, __set_ShootOrProductCountdown, 0x58);
 		INT_PROPERTY(ShootOrProductInterval, __get_ShootOrProductInterval, __set_ShootOrProductInterval, 0x5C);
+		INT_PROPERTY(mTargetX, __get_mTargetX, __set_mTargetX, 0x88);
+		INT_PROPERTY(mTargetY, __get_mTargetY, __set_mTargetY, 0x8C);
 		INT_PROPERTY(ShootingCountdown, __get_ShootingCountdown, __set_ShootingCountdown, 0x90);
 		SPT<PVZ::Animation> GetAnimationPart1();
 		SPT<PVZ::Animation> GetAnimationPart2();
@@ -658,6 +660,9 @@ namespace PVZ
 		void Flash(int cs = 100);
 		T_PROPERTY(FLOAT, ImageXOffset, __get_ImageXOffset, __set_ImageXOffset, 0xC0);
 		T_PROPERTY(FLOAT, ImageYOffset, __get_ImageYOffset, __set_ImageYOffset, 0xC4);
+		T_PROPERTY(DWORD, mTargetZombieID, __get_mTargetZombieID, __set_mTargetZombieID, 0x12C);
+		INT_PROPERTY(mWakeUpCounter, __get_mWakeUpCounter, __set_mWakeUpCounter, 0x130);
+		INT_PROPERTY(mOnBungee, __get_mOnBungee, __set_mOnBungee, 0x134);
 		T_PROPERTY(BOOLEAN, NotExist, __get_NotExist, __set_NotExist, 0x141);
 		T_PROPERTY(BOOLEAN, Squash, __get_Squash, __set_Squash, 0x142);
 		T_READONLY_PROPERTY(BOOLEAN, Sleeping, __get_Sleeping, 0x143);

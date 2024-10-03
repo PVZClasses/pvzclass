@@ -377,6 +377,8 @@ namespace PVZ
 	{
 	public:
 		GameObject() : BaseClass(0) {};
+		SPT<PVZ::PVZApp> GetLawnApp()
+		{ return(MKS<PVZ::PVZApp>(Memory::ReadMemory<DWORD>(BaseAddress))); }
 		SPT<PVZ::Board> GetBoard()
 		{
 			return(MKS<PVZ::Board>(Memory::ReadMemory<int>(BaseAddress + 4)));

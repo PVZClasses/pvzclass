@@ -938,12 +938,10 @@ namespace PVZ
 		INT_READONLY_PROPERTY(VaseCount, __get_VaseCount, 0x0B0);
 		INT_READONLY_PROPERTY(TreeOfWisdomTalkIndex, __get_TreeOfWisdomTalkIndex, 0x0B8);
 	};
-	class SaveData
+	class SaveData : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		SaveData(int baseaddress);
-		int GetBaseAddress();
+		SaveData(int baseaddress) : BaseClass(baseaddress) {};
 		void GetPVZUserName(char str[]);//str[12]
 		INT_READONLY_PROPERTY(UserSwitchCount, __get_UserSwitchCount, 0x1C);
 		INT_READONLY_PROPERTY(UserIndex, __get_UserIndex, 0x20);

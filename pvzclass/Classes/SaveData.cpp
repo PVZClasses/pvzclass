@@ -1,15 +1,5 @@
 ﻿#include "..\PVZ.h"
 
-PVZ::SaveData::SaveData(int baseaddress)
-{
-	BaseAddress = baseaddress;
-}
-
-int PVZ::SaveData::GetBaseAddress()
-{
-	return BaseAddress;
-}
-
 void PVZ::SaveData::GetPVZUserName(char str[])
 {
 	Memory::ReadArray<char>(BaseAddress + 4, str, 12);

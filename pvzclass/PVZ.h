@@ -192,6 +192,7 @@ namespace PVZ
 #pragma endregion
 
 #pragma region classes
+	//Do NOT construct this class directly!
 	class BaseClass
 	{
 	protected:
@@ -241,13 +242,10 @@ namespace PVZ
 	class Lawn;
 	class Icetrace;
 	class Wave;
-	class Widget
+	class Widget : public BaseClass
 	{
-	protected:
-		int BaseAddress;
 	public:
-		Widget(int address) : BaseAddress(address) {};
-		int GetBaseAddress();
+		Widget(int address) : BaseClass(address) {};
 		INT_PROPERTY(ViewX,			__get_ViewX,		__set_ViewX,		0x30);
 		INT_PROPERTY(ViewY,			__get_ViewY,		__set_ViewY,		0x34);
 		INT_PROPERTY(ViewLength,	__get_ViewLength,	__set_ViewLength,	0x38);

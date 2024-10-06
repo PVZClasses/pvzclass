@@ -390,12 +390,10 @@ namespace PVZ
 		INT_PROPERTY(Layer, __get_Layer, __set_Layer, 0x20);
 	};
 	class TrackInstance;
-	class AttachEffect
+	class AttachEffect : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		AttachEffect(int address);
-		int GetBaseAddress();
+		AttachEffect(int address) : BaseClass(address) {};
 	};
 	class Animation
 	{

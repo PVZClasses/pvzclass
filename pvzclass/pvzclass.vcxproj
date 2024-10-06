@@ -162,7 +162,6 @@
   <ItemGroup>
     <ClCompile Include="Classes\ChallengeScreen.cpp" />
     <ClCompile Include="Classes\Animation.cpp" />
-    <ClCompile Include="Classes\AttachEffect.cpp" />
     <ClCompile Include="Classes\Attachment.cpp" />
     <ClCompile Include="Classes\Board.cpp" />
     <ClCompile Include="Classes\Caption.cpp" />
@@ -185,7 +184,6 @@
     <ClCompile Include="Classes\SeedCard.cpp" />
     <ClCompile Include="Classes\SeedChoserScreen.cpp" />
     <ClCompile Include="Classes\TrackInstance.cpp" />
-    <ClCompile Include="Classes\Widget.cpp" />
     <ClCompile Include="Classes\ZenGarden.cpp" />
     <ClCompile Include="Creators.cpp" />
     <ClCompile Include="Draw.cpp" />

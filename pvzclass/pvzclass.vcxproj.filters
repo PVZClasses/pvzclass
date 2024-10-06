@@ -177,9 +177,6 @@
     <ClCompile Include="Classes\Animation.cpp">
       <Filter>源文件\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\AttachEffect.cpp">
-      <Filter>源文件\Classes</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\Attachment.cpp">
       <Filter>源文件\Classes</Filter>
     </ClCompile>
@@ -253,9 +250,6 @@
       <Filter>源文件\Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Wave.cpp">
-      <Filter>源文件\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Widget.cpp">
       <Filter>源文件\Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\ZenGarden.cpp">

@@ -489,11 +489,10 @@ namespace PVZ
 		void AddAll(ZombieType::ZombieType* ztypes, int length);
 	};
 	// 鼠标对象(控制层面的鼠标)
-	class Mouse
+	class Mouse : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		Mouse(int baseaddress);
+		Mouse(int baseaddress) : BaseClass(baseaddress) {};
 		T_READONLY_PROPERTY(BOOLEAN, InGameArea, __get_InGameArea, 0xDC);
 		INT_PROPERTY(X, __get_X, __set_X, 0xE0);
 		INT_PROPERTY(Y, __get_Y, __set_Y, 0xE4);

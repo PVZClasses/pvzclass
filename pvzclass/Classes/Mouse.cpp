@@ -1,10 +1,5 @@
 ﻿#include "../PVZ.h"
 
-PVZ::Mouse::Mouse(int baseaddress)
-{
-	BaseAddress = baseaddress;
-}
-
 void PVZ::Mouse::WMClick(short x, short y)
 {
 	SetForegroundWindow(Memory::mainwindowhandle);

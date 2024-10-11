@@ -5,6 +5,16 @@ void PVZ::SaveData::GetPVZUserName(char str[])
 	Memory::ReadArray<char>(BaseAddress + 4, str, 12);
 }
 
+int PVZ::SaveData::GetChallengeRecord(PVZLevel::PVZLevel mode)
+{
+	return Memory::ReadMemory<int>(BaseAddress + 0x30 + (mode - 1) * 4);
+}
+
+void PVZ::SaveData::SetChallengeRecord(PVZLevel::PVZLevel mode, int val)
+{
+	Memory::WriteMemory<int>(BaseAddress + 0x30 + (mode - 1) * 4, val);
+}
+
 BOOLEAN PVZ::SaveData::HavePurpleCard(CardType::CardType purplecard)
 {
 	if (purplecard >= CardType::GatlingPea && purplecard <= CardType::CobCannon)

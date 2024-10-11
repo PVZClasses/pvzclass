@@ -943,6 +943,8 @@ namespace PVZ
 		INT_PROPERTY(AdventureLevel, __get_AdventureLevel, __set_AdventureLevel, 0x24);
 		INT_PROPERTY(Money, __get_Money, __set_Money, 0x28);
 		INT_PROPERTY(AdventureFinishCount, __get_AdventureFinishCount, __set_AdventureFinishCount, 0x2C);
+		int GetChallengeRecord(PVZLevel::PVZLevel mode);
+		void SetChallengeRecord(PVZLevel::PVZLevel mode, int val);
 		INT_PROPERTY(TreeHight, __get_TreeHight, __set_TreeHight, 0xF4);
 		BOOLEAN HavePurpleCard(CardType::CardType purplecard);
 		T_PROPERTY(BOOLEAN, HaveImitater, __get_HaveImitater, __set_HaveImitater, 0x1E0);

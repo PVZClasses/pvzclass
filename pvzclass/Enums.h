@@ -45,3 +45,4 @@
 #include "Enums/ChallengeState.h"
 
 #include "Enums/ChallengePage.hpp"
+#include "Enums/StoreItem.hpp"

@@ -923,14 +923,19 @@ namespace PVZ
 		T_PROPERTY(BOOLEAN, UpgradedRepeater, __get_UpgradedRepeater, __set_UpgradedRepeater, 0x4A);
 		T_PROPERTY(BOOLEAN, UpgradedFumeshroom, __get_UpgradedFumeshroom, __set_UpgradedFumeshroom, 0x4B);
 		T_PROPERTY(BOOLEAN, UpgradedTallnut, __get_UpgradedTallnut, __set_UpgradedTallnut, 0x4C);
+		INT_PROPERTY(BeghouledMatchesThisMove, __get_BeghouledMatchesThisMove, __set_BeghouledMatchesThisMove, 0x50);
 		T_PROPERTY(ChallengeState::ChallengeState, State, __get_State, __set_State, 0x54);
 		INT_PROPERTY(AttributeCountdown, __get_AttributeCountdown, __set_AttributeCountdown, 0x58);
 		INT_PROPERTY(ConveyorCountdown, __get_ConveyorCountdown, __set_ConveyorCountdown, 0x5C);
 		INT_PROPERTY(LevelProcess, __get_LevelProcess, __set_LevelProcess, 0x60);
+		T_PROPERTY(BOOLEAN, ShowBowlingLine, __get_ShowBowlingLine, __set_ShowBowlingLine, 0x64);
 		T_PROPERTY(CardType::CardType, ConveyorLastCard, __get_ConveyorLastCard, __set_ConveyorLastCard, 0x68);
 		INT_PROPERTY(Round, __get_Round, __set_Round, 0x6C);
 		INT_PROPERTY(SlotMachineRollCount, __get_SlotMachineRollCount, __set_SlotMachineRollCount, 0x70);
+		INT_PROPERTY(ChallengeGridX, __get_ChallengeGridX, __set_ChallengeGridX, 0x0A8);
+		INT_PROPERTY(ChallengeGridY, __get_ChallengeGridY, __set_ChallengeGridY, 0x0AC);
 		INT_READONLY_PROPERTY(VaseCount, __get_VaseCount, 0x0B0);
+		INT_PROPERTY(RainCounter, __get_RainCounter, __set_RainCounter, 0x0B4);
 		INT_READONLY_PROPERTY(TreeOfWisdomTalkIndex, __get_TreeOfWisdomTalkIndex, 0x0B8);
 	};
 	class SaveData : public BaseClass

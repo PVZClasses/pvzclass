@@ -948,9 +948,13 @@ namespace PVZ
 		INT_PROPERTY(AdventureLevel, __get_AdventureLevel, __set_AdventureLevel, 0x24);
 		INT_PROPERTY(Money, __get_Money, __set_Money, 0x28);
 		INT_PROPERTY(AdventureFinishCount, __get_AdventureFinishCount, __set_AdventureFinishCount, 0x2C);
+		// 获取当前用户是否购买了指定物品，或者指定物品的剩余数量。
 		int GetPurchase(StoreItem::StoreItem item);
+		// 设定当前用户是否购买了指定物品，或者指定物品的剩余数量。
 		void SetPurchase(StoreItem::StoreItem item, int val);
+		// 获取当前用户通过某一关卡的次数，或者最高波数的通关记录。
 		int GetChallengeRecord(PVZLevel::PVZLevel mode);
+		// 设定当前用户通过某一关卡的次数，或者最高波数的通关记录。
 		void SetChallengeRecord(PVZLevel::PVZLevel mode, int val);
 		INT_PROPERTY(TreeHight, __get_TreeHight, __set_TreeHight, 0xF4);
 		BOOLEAN HavePurpleCard(CardType::CardType purplecard);

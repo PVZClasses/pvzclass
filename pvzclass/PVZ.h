@@ -980,12 +980,10 @@ namespace PVZ
 		};
 		SPT<GardenPlant> GetGardenPlant(int index);
 	};
-	class Music
+	class Music : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		Music(int address);
-		int GetBaseAddress();
+		Music(int address) : BaseClass(address) {};
 		PROPERTY(MusicType::MusicType, __get_Type, __set_Type) Type;
 		//MINGAM_ENABLE or MINGAM_DISABLE
 		INT_PROPERTY(INGAMEable, __get_INGAMEable, __set_INGAMEable, 0x10);

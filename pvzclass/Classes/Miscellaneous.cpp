@@ -49,3 +49,18 @@ void PVZ::Miscellaneous::SetCrater(int row, int column, BOOLEAN b)
 	if (row >= 0 && row < 6 && column >= 0 && column < 9)
 		Memory::WriteMemory<byte>(BaseAddress + 0x14 + 6 * column + row, b);
 }
+
+byte __asm__IZSquishBrain[]
+{
+	MOV_EUX(REG_EAX, 0),
+	PUSHDWORD(0),
+	INVOKE(0x42BA30),
+	RET
+};
+
+void PVZ::Miscellaneous::IZSquishBrain(SPT<IZBrain> brain)
+{
+	SETARG(__asm__IZSquishBrain, 1) = brain->GetBaseAddress();
+	SETARG(__asm__IZSquishBrain, 6) = this->GetBaseAddress();
+	PVZ::Memory::Execute(STRING(__asm__IZSquishBrain));
+}

@@ -937,6 +937,8 @@ namespace PVZ
 		INT_READONLY_PROPERTY(VaseCount, __get_VaseCount, 0x0B0);
 		INT_PROPERTY(RainCounter, __get_RainCounter, __set_RainCounter, 0x0B4);
 		INT_READONLY_PROPERTY(TreeOfWisdomTalkIndex, __get_TreeOfWisdomTalkIndex, 0x0B8);
+
+		void IZSquishBrain(SPT<IZBrain> brain);
 	};
 	class SaveData : public BaseClass
 	{

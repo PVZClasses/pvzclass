@@ -229,6 +229,12 @@ namespace PVZ
 	};
 	SPT<PVZApp> GetPVZApp();
 
+	class Image : public BaseClass
+	{
+	public:
+		Image(int address) : BaseClass(address){};
+	};
+
 	class Zombie;
 	class Plant;
 	class Projectile;
@@ -434,6 +440,7 @@ namespace PVZ
 		void Play(const char* TrackName, int blendType, int loopType, float rate);
 		void AssignRenderGroupToPrefix(byte RenderGroup, const char* TrackName);
 		int FindTrackIndex(const char* trackName);
+		void SetImageOverride(const char* theTrackName, Image* theImage);
 	};
 	class Attachment
 	{

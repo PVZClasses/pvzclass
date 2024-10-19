@@ -192,6 +192,7 @@ namespace PVZ
 #pragma endregion
 
 #pragma region classes
+	//Do NOT construct this class directly!
 	class BaseClass
 	{
 	protected:
@@ -228,6 +229,12 @@ namespace PVZ
 	};
 	SPT<PVZApp> GetPVZApp();
 
+	class Image : public BaseClass
+	{
+	public:
+		Image(int address) : BaseClass(address){};
+	};
+
 	class Zombie;
 	class Plant;
 	class Projectile;
@@ -241,13 +248,10 @@ namespace PVZ
 	class Lawn;
 	class Icetrace;
 	class Wave;
-	class Widget
+	class Widget : public BaseClass
 	{
-	protected:
-		int BaseAddress;
 	public:
-		Widget(int address) : BaseAddress(address) {};
-		int GetBaseAddress();
+		Widget(int address) : BaseClass(address) {};
 		INT_PROPERTY(ViewX,			__get_ViewX,		__set_ViewX,		0x30);
 		INT_PROPERTY(ViewY,			__get_ViewY,		__set_ViewY,		0x34);
 		INT_PROPERTY(ViewLength,	__get_ViewLength,	__set_ViewLength,	0x38);
@@ -377,6 +381,8 @@ namespace PVZ
 	{
 	public:
 		GameObject() : BaseClass(0) {};
+		SPT<PVZ::PVZApp> GetLawnApp()
+		{ return(MKS<PVZ::PVZApp>(Memory::ReadMemory<DWORD>(BaseAddress))); }
 		SPT<PVZ::Board> GetBoard()
 		{
 			return(MKS<PVZ::Board>(Memory::ReadMemory<int>(BaseAddress + 4)));
@@ -390,12 +396,10 @@ namespace PVZ
 		INT_PROPERTY(Layer, __get_Layer, __set_Layer, 0x20);
 	};
 	class TrackInstance;
-	class AttachEffect
+	class AttachEffect : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		AttachEffect(int address);
-		int GetBaseAddress();
+		AttachEffect(int address) : BaseClass(address) {};
 	};
 	class Animation
 	{
@@ -436,6 +440,7 @@ namespace PVZ
 		void Play(const char* TrackName, int blendType, int loopType, float rate);
 		void AssignRenderGroupToPrefix(byte RenderGroup, const char* TrackName);
 		int FindTrackIndex(const char* trackName);
+		void SetImageOverride(const char* theTrackName, Image* theImage);
 	};
 	class Attachment
 	{
@@ -491,11 +496,10 @@ namespace PVZ
 		void AddAll(ZombieType::ZombieType* ztypes, int length);
 	};
 	// 鼠标对象(控制层面的鼠标)
-	class Mouse
+	class Mouse : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		Mouse(int baseaddress);
+		Mouse(int baseaddress) : BaseClass(baseaddress) {};
 		T_READONLY_PROPERTY(BOOLEAN, InGameArea, __get_InGameArea, 0xDC);
 		INT_PROPERTY(X, __get_X, __set_X, 0xE0);
 		INT_PROPERTY(Y, __get_Y, __set_Y, 0xE4);
@@ -644,6 +648,8 @@ namespace PVZ
 		INT_PROPERTY(AttributeCountdown, __get_AttributeCountdown, __set_AttributeCountdown, 0x54);
 		INT_PROPERTY(ShootOrProductCountdown, __get_ShootOrProductCountdown, __set_ShootOrProductCountdown, 0x58);
 		INT_PROPERTY(ShootOrProductInterval, __get_ShootOrProductInterval, __set_ShootOrProductInterval, 0x5C);
+		INT_PROPERTY(mTargetX, __get_mTargetX, __set_mTargetX, 0x88);
+		INT_PROPERTY(mTargetY, __get_mTargetY, __set_mTargetY, 0x8C);
 		INT_PROPERTY(ShootingCountdown, __get_ShootingCountdown, __set_ShootingCountdown, 0x90);
 		SPT<PVZ::Animation> GetAnimationPart1();
 		SPT<PVZ::Animation> GetAnimationPart2();
@@ -656,6 +662,9 @@ namespace PVZ
 		void Flash(int cs = 100);
 		T_PROPERTY(FLOAT, ImageXOffset, __get_ImageXOffset, __set_ImageXOffset, 0xC0);
 		T_PROPERTY(FLOAT, ImageYOffset, __get_ImageYOffset, __set_ImageYOffset, 0xC4);
+		T_PROPERTY(DWORD, mTargetZombieID, __get_mTargetZombieID, __set_mTargetZombieID, 0x12C);
+		INT_PROPERTY(mWakeUpCounter, __get_mWakeUpCounter, __set_mWakeUpCounter, 0x130);
+		INT_PROPERTY(mOnBungee, __get_mOnBungee, __set_mOnBungee, 0x134);
 		T_PROPERTY(BOOLEAN, NotExist, __get_NotExist, __set_NotExist, 0x141);
 		T_PROPERTY(BOOLEAN, Squash, __get_Squash, __set_Squash, 0x142);
 		T_READONLY_PROPERTY(BOOLEAN, Sleeping, __get_Sleeping, 0x143);
@@ -902,6 +911,7 @@ namespace PVZ
 	};
 	class Miscellaneous
 	{
+	protected:
 		int BaseAddress;
 	public:
 		Miscellaneous(int address);
@@ -921,28 +931,41 @@ namespace PVZ
 		T_PROPERTY(BOOLEAN, UpgradedRepeater, __get_UpgradedRepeater, __set_UpgradedRepeater, 0x4A);
 		T_PROPERTY(BOOLEAN, UpgradedFumeshroom, __get_UpgradedFumeshroom, __set_UpgradedFumeshroom, 0x4B);
 		T_PROPERTY(BOOLEAN, UpgradedTallnut, __get_UpgradedTallnut, __set_UpgradedTallnut, 0x4C);
+		INT_PROPERTY(BeghouledMatchesThisMove, __get_BeghouledMatchesThisMove, __set_BeghouledMatchesThisMove, 0x50);
 		T_PROPERTY(ChallengeState::ChallengeState, State, __get_State, __set_State, 0x54);
 		INT_PROPERTY(AttributeCountdown, __get_AttributeCountdown, __set_AttributeCountdown, 0x58);
 		INT_PROPERTY(ConveyorCountdown, __get_ConveyorCountdown, __set_ConveyorCountdown, 0x5C);
 		INT_PROPERTY(LevelProcess, __get_LevelProcess, __set_LevelProcess, 0x60);
+		T_PROPERTY(BOOLEAN, ShowBowlingLine, __get_ShowBowlingLine, __set_ShowBowlingLine, 0x64);
 		T_PROPERTY(CardType::CardType, ConveyorLastCard, __get_ConveyorLastCard, __set_ConveyorLastCard, 0x68);
 		INT_PROPERTY(Round, __get_Round, __set_Round, 0x6C);
 		INT_PROPERTY(SlotMachineRollCount, __get_SlotMachineRollCount, __set_SlotMachineRollCount, 0x70);
+		INT_PROPERTY(ChallengeGridX, __get_ChallengeGridX, __set_ChallengeGridX, 0x0A8);
+		INT_PROPERTY(ChallengeGridY, __get_ChallengeGridY, __set_ChallengeGridY, 0x0AC);
 		INT_READONLY_PROPERTY(VaseCount, __get_VaseCount, 0x0B0);
+		INT_PROPERTY(RainCounter, __get_RainCounter, __set_RainCounter, 0x0B4);
 		INT_READONLY_PROPERTY(TreeOfWisdomTalkIndex, __get_TreeOfWisdomTalkIndex, 0x0B8);
+
+		void IZSquishBrain(SPT<IZBrain> brain);
 	};
-	class SaveData
+	class SaveData : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		SaveData(int baseaddress);
-		int GetBaseAddress();
+		SaveData(int baseaddress) : BaseClass(baseaddress) {};
 		void GetPVZUserName(char str[]);//str[12]
 		INT_READONLY_PROPERTY(UserSwitchCount, __get_UserSwitchCount, 0x1C);
 		INT_READONLY_PROPERTY(UserIndex, __get_UserIndex, 0x20);
 		INT_PROPERTY(AdventureLevel, __get_AdventureLevel, __set_AdventureLevel, 0x24);
 		INT_PROPERTY(Money, __get_Money, __set_Money, 0x28);
 		INT_PROPERTY(AdventureFinishCount, __get_AdventureFinishCount, __set_AdventureFinishCount, 0x2C);
+		// 获取当前用户是否购买了指定物品，或者指定物品的剩余数量。
+		int GetPurchase(StoreItem::StoreItem item);
+		// 设定当前用户是否购买了指定物品，或者指定物品的剩余数量。
+		void SetPurchase(StoreItem::StoreItem item, int val);
+		// 获取当前用户通过某一关卡的次数，或者最高波数的通关记录。
+		int GetChallengeRecord(PVZLevel::PVZLevel mode);
+		// 设定当前用户通过某一关卡的次数，或者最高波数的通关记录。
+		void SetChallengeRecord(PVZLevel::PVZLevel mode, int val);
 		INT_PROPERTY(TreeHight, __get_TreeHight, __set_TreeHight, 0xF4);
 		BOOLEAN HavePurpleCard(CardType::CardType purplecard);
 		T_PROPERTY(BOOLEAN, HaveImitater, __get_HaveImitater, __set_HaveImitater, 0x1E0);
@@ -971,12 +994,10 @@ namespace PVZ
 		};
 		SPT<GardenPlant> GetGardenPlant(int index);
 	};
-	class Music
+	class Music : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		Music(int address);
-		int GetBaseAddress();
+		Music(int address) : BaseClass(address) {};
 		PROPERTY(MusicType::MusicType, __get_Type, __set_Type) Type;
 		//MINGAM_ENABLE or MINGAM_DISABLE
 		INT_PROPERTY(INGAMEable, __get_INGAMEable, __set_INGAMEable, 0x10);

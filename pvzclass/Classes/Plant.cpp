@@ -25,6 +25,8 @@ void PVZ::Plant::SetMemSize(int NewSize = 0x14C, int NewCount = 1024)
 {
 	if (NewSize < 0x14C)
 		return;
+	Memory::WriteMemory<int>(0x401AAC, NewSize - 4);
+	Memory::WriteMemory<int>(0x401C08, NewSize - 4);
 	Memory::WriteMemory<int>(0x407CC2, NewSize * NewCount);
 	Memory::WriteMemory<int>(0x4109F6, NewSize);
 	Memory::WriteMemory<int>(0x41BAED, NewSize);

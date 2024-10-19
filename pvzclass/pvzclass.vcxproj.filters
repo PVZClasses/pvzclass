@@ -37,6 +37,9 @@
     <Filter Include="头文件\Events\Lawnmower">
       <UniqueIdentifier>{faa47763-e693-44c8-8ebc-978f6cbe51e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Enums\PlayerInfo">
+      <UniqueIdentifier>{03cd7358-fb6c-4544-b46e-edd1948aa82e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -177,9 +180,6 @@
     <ClCompile Include="Classes\Animation.cpp">
       <Filter>源文件\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\AttachEffect.cpp">
-      <Filter>源文件\Classes</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\Attachment.cpp">
       <Filter>源文件\Classes</Filter>
     </ClCompile>
@@ -253,9 +253,6 @@
       <Filter>源文件\Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Wave.cpp">
-      <Filter>源文件\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Widget.cpp">
       <Filter>源文件\Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\ZenGarden.cpp">
@@ -601,6 +598,9 @@
     </ClInclude>
     <ClInclude Include="Events\IZScoreBrainEvent.hpp">
       <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums\StoreItem.hpp">
+      <Filter>头文件\Enums\PlayerInfo</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

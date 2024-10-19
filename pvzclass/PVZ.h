@@ -904,6 +904,7 @@ namespace PVZ
 	};
 	class Miscellaneous
 	{
+	protected:
 		int BaseAddress;
 	public:
 		Miscellaneous(int address);

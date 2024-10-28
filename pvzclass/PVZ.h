@@ -410,6 +410,7 @@ namespace PVZ
 		static void UnLock(int animprop);
 		static void Lock();
 		int GetBaseAddress();
+		T_READONLY_PROPERTY(AnimationType::AnimationType, Type, __get_Type, 0);
 		T_PROPERTY(FLOAT, CycleRate, __get_CycleRate, __set_CycleRate, 4);
 		T_PROPERTY(FLOAT, Speed, __get_Speed, __set_Speed, 8);
 		T_PROPERTY(BOOLEAN, NotExist, __get_NotExist, __set_NotExist, 0x14);

@@ -520,7 +520,7 @@ namespace PVZ
 
 		struct AccessoriesType1
 		{
-			ZombieAccessoriesType1::ZombieAccessoriesType1 Type;
+			HelmType::HelmType Type;
 			int Hp;
 			int MaxHp;
 		};

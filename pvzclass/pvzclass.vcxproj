@@ -221,7 +221,7 @@
     <ClCompile Include="Enums\ThreeState.cpp" />
     <ClCompile Include="Enums\VaseContent.cpp" />
     <ClCompile Include="Enums\VaseSkin.cpp" />
-    <ClCompile Include="Enums\ZombieAccessoriesType1.cpp" />
+    <ClCompile Include="Enums\HelmType.cpp" />
     <ClCompile Include="Enums\ZombieAccessoriesType2.cpp" />
     <ClCompile Include="Enums\ZombieState.cpp" />
     <ClCompile Include="Enums\ZombieType.cpp" />
@@ -306,7 +306,7 @@
     <ClInclude Include="Enums\SceneType.h" />
     <ClInclude Include="Enums\VaseContent.h" />
     <ClInclude Include="Enums\VaseSkin.h" />
-    <ClInclude Include="Enums\ZombieAccessoriesType1.h" />
+    <ClInclude Include="Enums\HelmType.h" />
     <ClInclude Include="Enums\ZombieAccessoriesType2.h" />
     <ClInclude Include="Enums\ZombieState.h" />
     <ClInclude Include="Enums\ZombieType.h" />

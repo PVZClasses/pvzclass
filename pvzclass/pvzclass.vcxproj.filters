@@ -40,6 +40,9 @@
     <Filter Include="头文件\Enums\PlayerInfo">
       <UniqueIdentifier>{03cd7358-fb6c-4544-b46e-edd1948aa82e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Enums\Zombie">
+      <UniqueIdentifier>{b9d6e170-1928-45a6-bea9-de629fc47697}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -66,7 +69,7 @@
     <ClCompile Include="Enums\VaseSkin.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
-    <ClCompile Include="Enums\ZombieAccessoriesType1.cpp">
+    <ClCompile Include="Enums\HelmType.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
     <ClCompile Include="Enums\ZombieAccessoriesType2.cpp">
@@ -377,9 +380,6 @@
     <ClInclude Include="Enums\ZombieAccessoriesType2.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Enums\ZombieAccessoriesType1.h">
-      <Filter>头文件\Enums</Filter>
-    </ClInclude>
     <ClInclude Include="Enums\VaseSkin.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
@@ -595,6 +595,9 @@
     </ClInclude>
     <ClInclude Include="Enums\StoreItem.hpp">
       <Filter>头文件\Enums\PlayerInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums\HelmType.h">
+      <Filter>头文件\Enums\Zombie</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

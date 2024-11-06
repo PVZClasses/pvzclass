@@ -89,17 +89,11 @@ namespace CardType
 {
 	// Deprecated
 	typedef SeedType::SeedType CardType;
-	const char* ToString(CardType cardt)
-	{
-		return(SeedType::ToString(cardt));
-	}
+	const char* ToString(CardType cardt);
 }
 namespace PlantType
 {
 	// Deprecated
 	typedef SeedType::SeedType PlantType;
-	const char* ToString(PlantType plantt)
-	{
-		return(SeedType::ToString(plantt));
-	}
+	const char* ToString(PlantType plantt);
 }

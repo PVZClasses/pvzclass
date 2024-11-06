@@ -1,5 +1,7 @@
 ﻿#include "PVZ.h"
 
+PVZ::Image* PVZ::Resource::IMAGE_BLANK = nullptr;
+
 /*
 	0x530: active 为1时阻塞游戏更新，执行完Execute之后改为0
 	0x540: enable 为1时代表可以执行Execute
@@ -23,7 +25,7 @@ namespace PVZ
 {
 	void InitImages()
 	{
-		IMAGE_BLANK = new Image(Memory::ReadMemory<DWORD>(0x6A77BC));
+		PVZ::Resource::IMAGE_BLANK = new Image(Memory::ReadMemory<DWORD>(0x6A77BC));
 	}
 
 	void InitPVZ(DWORD pid)

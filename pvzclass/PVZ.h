@@ -1099,7 +1099,11 @@ namespace PVZ
 
 #pragma region Images
 
-	PVZ::Image* IMAGE_BLANK;
+	class Resource
+	{
+	public:
+		static Image* IMAGE_BLANK;
+	};
 
 #pragma endregion
 };

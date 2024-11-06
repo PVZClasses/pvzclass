@@ -35,3 +35,4 @@
 #include "ZombieHitEvent.h"
 #include "ZombieHypnotizeEvent.h"
 #include "ZombieRemoveEvent.h"
+#include "ZombieUpdateActionEvent.hpp"

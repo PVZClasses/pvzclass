@@ -312,6 +312,7 @@
     <ClInclude Include="Enums\ZombieType.h" />
     <ClInclude Include="Enums\UpperSoundType.h" />
     <ClInclude Include="Enums\AnimationType.h" />
+    <ClInclude Include="Events\ZombieUpdateActionEvent.hpp" />
     <ClInclude Include="Flags.h" />
     <ClInclude Include="Events\ImitaterPlantEvent.h" />
     <ClInclude Include="Injectors.h" />

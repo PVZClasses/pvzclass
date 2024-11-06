@@ -43,6 +43,9 @@
     <Filter Include="头文件\Enums\Zombie">
       <UniqueIdentifier>{b9d6e170-1928-45a6-bea9-de629fc47697}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Zombie">
+      <UniqueIdentifier>{fbcdc89d-f37a-485c-a126-79bd99444fbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -598,6 +601,9 @@
     </ClInclude>
     <ClInclude Include="Enums\HelmType.h">
       <Filter>头文件\Enums\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieUpdateActionEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

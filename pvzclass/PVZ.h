@@ -441,6 +441,10 @@ namespace PVZ
 		void Play(const char* TrackName, int blendType, int loopType, float rate);
 		void AssignRenderGroupToPrefix(byte RenderGroup, const char* TrackName);
 		int FindTrackIndex(const char* trackName);
+
+		//@brief 令动画部件执行 trackName 动作。
+		//@param trackName 执行的动作轨道名称。
+		void SetFramesForLayer(const char* theTrackName);
 		void SetImageOverride(const char* theTrackName, Image* theImage);
 	};
 	class Attachment

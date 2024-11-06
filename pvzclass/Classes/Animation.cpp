@@ -142,6 +142,22 @@ int PVZ::Animation::FindTrackIndex(const char* trackName)
 	return(PVZ::Memory::Execute(STRING(__asm__Reanimation__FindTrackIndex)));
 }
 
+byte __asm__Reanimation_SetFramesForLayer[]
+{
+	PUSHDWORD(0),
+	MOV_ECX(0),
+	INVOKE(0x473280),
+	RET
+};
+
+void PVZ::Animation::SetFramesForLayer(const char* theTrackName)
+{
+	PVZ::Memory::WriteArray<const char>(PVZ::Memory::Variable + 100, theTrackName, std::strlen(theTrackName) + 1);
+	SETARG(__asm__Reanimation_SetFramesForLayer, 1) = PVZ::Memory::Variable + 100;
+	SETARG(__asm__Reanimation_SetFramesForLayer, 6) = this->BaseAddress;
+	PVZ::Memory::Execute(STRING(__asm__Reanimation_SetFramesForLayer));
+}
+
 byte __asm__Reanimation_SetImageOverride[]
 {
 	PUSHDWORD(0),

@@ -21,6 +21,11 @@ byte __asm__UpdateHook[]
 
 namespace PVZ
 {
+	void InitImages()
+	{
+		IMAGE_BLANK = new Image(Memory::ReadMemory<DWORD>(0x6A77BC));
+	}
+
 	void InitPVZ(DWORD pid)
 	{
 		Memory::processId = pid;
@@ -39,6 +44,8 @@ namespace PVZ
 		Memory::WriteArray<BYTE>(Memory::Variable + 0x500, STRING(__asm__Execute));
 		SETARG(__asm__UpdateHook, 1) = Memory::Variable + 0x500 - 0x415D40 - 5;
 		Memory::WriteArray<BYTE>(0x415D40, STRING(__asm__UpdateHook));
+
+		InitImages();
 	}
 
 	void QuitPVZ()

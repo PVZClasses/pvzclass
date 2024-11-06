@@ -1097,4 +1097,9 @@ namespace PVZ
 
 #pragma endregion
 
+#pragma region Images
+
+	PVZ::Image* IMAGE_BLANK;
+
+#pragma endregion
 };

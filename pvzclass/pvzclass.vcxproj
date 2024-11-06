@@ -188,7 +188,7 @@
     <ClCompile Include="Creators.cpp" />
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="Enums\CaptionStyle.cpp" />
-    <ClCompile Include="Enums\CardType.cpp" />
+    <ClCompile Include="Enums\SeedType.cpp" />
     <ClCompile Include="Enums\ChallengePage.cpp" />
     <ClCompile Include="Enums\CoinMotionType.cpp" />
     <ClCompile Include="Enums\CoinType.cpp" />
@@ -279,7 +279,7 @@
     <ClInclude Include="Enums.h" />
     <ClInclude Include="AsmFunctions.h" />
     <ClInclude Include="Enums\CaptionStyle.h" />
-    <ClInclude Include="Enums\CardType.h" />
+    <ClInclude Include="Enums\SeedType.h" />
     <ClInclude Include="Enums\ChallengeState.h" />
     <ClInclude Include="Enums\CoinMotionType.h" />
     <ClInclude Include="Enums\CoinType.h" />

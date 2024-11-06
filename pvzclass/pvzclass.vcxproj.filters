@@ -129,7 +129,7 @@
     <ClCompile Include="Enums\GardenPlantState.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
-    <ClCompile Include="Enums\CardType.cpp">
+    <ClCompile Include="Enums\SeedType.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
     <ClCompile Include="Enums\CoinMotionType.cpp">
@@ -320,7 +320,7 @@
     <ClInclude Include="Enums\CoinMotionType.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Enums\CardType.h">
+    <ClInclude Include="Enums\SeedType.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Enums\CoinType.h">

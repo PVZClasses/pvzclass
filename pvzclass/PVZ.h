@@ -363,12 +363,12 @@ namespace PVZ
 			ChosenSeed(int address) : BaseClass(address) {};
 			INT_PROPERTY(X, __get_X, __set_X, 0);
 			INT_PROPERTY(Y, __get_Y, __set_Y, 4);
-			T_PROPERTY(CardType::CardType, Type, __get_Type, __set_Type, 0x20);
+			T_PROPERTY(SeedType::SeedType, Type, __get_Type, __set_Type, 0x20);
 			T_PROPERTY(SeedState::SeedState, State, __get_State, __set_State, 0x24);
 			INT_PROPERTY(IndexInSlot, __get_IndexInSlot, __set_IndexInSlot, 0x28);
 			T_PROPERTY(BOOLEAN, Refreshing, __get_Refreshing, __set_Refreshing, 0x2C);
 			INT_PROPERTY(RefreshCounter, __get_RefreshCounter, __set_RefreshCounter, 0x30);
-			T_PROPERTY(CardType::CardType, ImitaterType, __get_ImitaterType, __set_ImitaterType, 0x34);
+			T_PROPERTY(SeedType::SeedType, ImitaterType, __get_ImitaterType, __set_ImitaterType, 0x34);
 			T_PROPERTY(BOOLEAN, CrazyDavePick, __get_CrazyDavePick, __set_CrazyDavePick, 0x38);
 		};
 
@@ -733,7 +733,7 @@ namespace PVZ
 		T_PROPERTY(CoinType::CoinType, Type, __get_Type, __set_Type, 0x58);
 		T_PROPERTY(CoinMotionType::CoinMotionType, Motion, __get_Motion, __set_Motion, 0x5C);
 		SPT<PVZ::Attachment> GetAttachment();
-		T_PROPERTY(CardType::CardType, ContentCard, __get_ContentCard, __set_ContentCard, 0x68);
+		T_PROPERTY(SeedType::SeedType, ContentCard, __get_ContentCard, __set_ContentCard, 0x68);
 		SPT<PVZ::GardenPlant> GetGardenPlant();
 		T_PROPERTY(BOOLEAN, HasHalo, __get_HasHalo, __set_HasHalo, 0xC8);
 		INT_READONLY_PROPERTY(Id, __get_Id, 0xD0);
@@ -847,8 +847,8 @@ namespace PVZ
 	public:
 		MousePointer(int address);
 		INT_PROPERTY(CardIndex, __get_CardIndex, __set_CardIndex, 0x24);
-		T_PROPERTY(CardType::CardType, ContentCard, __get_ContentCard, __set_ContentCard, 0x28);
-		T_PROPERTY(CardType::CardType, ContentCardImitative, __get_ContentCardImitative, __set_ContentCardImitative, 0x2C);
+		T_PROPERTY(SeedType::SeedType, ContentCard, __get_ContentCard, __set_ContentCard, 0x28);
+		T_PROPERTY(SeedType::SeedType, ContentCardImitative, __get_ContentCardImitative, __set_ContentCardImitative, 0x2C);
 		T_PROPERTY(MouseType::MouseType, Type, __get_Type, __set_Type, 0x30);
 		INT_PROPERTY(CoinID, __get_CoinID, __set_CoinID, 0x34);
 		INT_PROPERTY(GlovePlantID, __get_GlovePlantID, __set_GlovePlantID, 0x38);
@@ -896,10 +896,10 @@ namespace PVZ
 			INT_PROPERTY(CoolDownInterval, __get_CoolDownInterval, __set_CoolDownInterval, 0x28);
 			INT_READONLY_PROPERTY(Index, __get_Index, 0x2C);
 			INT_PROPERTY(XInConveyorBelt, __get_XInConveyorBelt, __set_XInConveyorBelt, 0x30);
-			T_PROPERTY(CardType::CardType, ContentCard, __get_ContentCard, __set_ContentCard, 0x34);
-			T_PROPERTY(CardType::CardType, ContentCardImitative, __get_ContentCardImitative, __set_ContentCardImitative, 0x38);
+			T_PROPERTY(SeedType::SeedType, ContentCard, __get_ContentCard, __set_ContentCard, 0x34);
+			T_PROPERTY(SeedType::SeedType, ContentCardImitative, __get_ContentCardImitative, __set_ContentCardImitative, 0x38);
 			INT_PROPERTY(SlotCountdown, __get_SlotCountdown, __set_SlotCountdown, 0x3C);
-			T_PROPERTY(CardType::CardType, SlotType, __get_SlotType, __set_SlotType, 0x40);
+			T_PROPERTY(SeedType::SeedType, SlotType, __get_SlotType, __set_SlotType, 0x40);
 			T_PROPERTY(FLOAT, SlotPosition, __get_SlotPosition, __set_SlotPosition, 0x44);
 			T_PROPERTY(BOOLEAN, Enable, __get_Enable, __set_Enable, 0x48); // 该卡槽是否可点击
 			T_PROPERTY(BOOLEAN, Active, __get_Active, __set_Active, 0x49); // 该卡槽是否正在CD
@@ -938,7 +938,7 @@ namespace PVZ
 		INT_PROPERTY(ConveyorCountdown, __get_ConveyorCountdown, __set_ConveyorCountdown, 0x5C);
 		INT_PROPERTY(LevelProcess, __get_LevelProcess, __set_LevelProcess, 0x60);
 		T_PROPERTY(BOOLEAN, ShowBowlingLine, __get_ShowBowlingLine, __set_ShowBowlingLine, 0x64);
-		T_PROPERTY(CardType::CardType, ConveyorLastCard, __get_ConveyorLastCard, __set_ConveyorLastCard, 0x68);
+		T_PROPERTY(SeedType::SeedType, ConveyorLastCard, __get_ConveyorLastCard, __set_ConveyorLastCard, 0x68);
 		INT_PROPERTY(Round, __get_Round, __set_Round, 0x6C);
 		INT_PROPERTY(SlotMachineRollCount, __get_SlotMachineRollCount, __set_SlotMachineRollCount, 0x70);
 		INT_PROPERTY(ChallengeGridX, __get_ChallengeGridX, __set_ChallengeGridX, 0x0A8);
@@ -968,7 +968,7 @@ namespace PVZ
 		// 设定当前用户通过某一关卡的次数，或者最高波数的通关记录。
 		void SetChallengeRecord(PVZLevel::PVZLevel mode, int val);
 		INT_PROPERTY(TreeHight, __get_TreeHight, __set_TreeHight, 0xF4);
-		BOOLEAN HavePurpleCard(CardType::CardType purplecard);
+		BOOLEAN HavePurpleCard(SeedType::SeedType purplecard);
 		T_PROPERTY(BOOLEAN, HaveImitater, __get_HaveImitater, __set_HaveImitater, 0x1E0);
 		T_PROPERTY(BOOLEAN, HaveGoldenWatering, __get_HaveGoldenWatering, __set_HaveGoldenWatering, 0x1F4);
 		INT_PROPERTY(Fertilizer, __get_Fertilizer, __set_Fertilizer, 0x1F8);//-1000
@@ -1029,7 +1029,7 @@ namespace PVZ
 		int BaseAddress;
 	public:
 		PlantDefinition(PlantType::PlantType type);
-		T_READONLY_PROPERTY(CardType::CardType, Type, __get_Type, 0);
+		T_READONLY_PROPERTY(SeedType::SeedType, Type, __get_Type, 0);
 		T_READONLY_PROPERTY(AnimationType::AnimationType, AnimType, __get_AnimType, 8);
 		INT_READONLY_PROPERTY(PacketID, __get_PacketID, 0xC);
 		INT_PROPERTY(Cost, __get_Cost, __set_Cost, 0x10);

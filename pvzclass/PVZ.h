@@ -470,7 +470,7 @@ namespace PVZ
 		void SetGridType(int row, int column, LawnType::LawnType type);
 		RouteType::RouteType GetRouteType(int route);
 		void SetRouteType(int route, RouteType::RouteType type);
-		bool Plantable(int row, int column, PlantType::PlantType type);
+		bool Plantable(int row, int column, SeedType::SeedType type);
 	};
 	class Icetrace
 	{
@@ -638,7 +638,7 @@ namespace PVZ
 		因此，请在派生类中调用这个函数，并且为派生类单独撰写新的构造函数和 GetAll() 。
 		另外，调用该函数后，新生成的存档与原版存档不兼容，请注意清理。 */
 		static void SetMemSize(int NewSize, int NewCount);
-		T_PROPERTY(PlantType::PlantType, Type, __get_Type, __set_Type, 0x24);
+		T_PROPERTY(SeedType::SeedType, Type, __get_Type, __set_Type, 0x24);
 		INT_PROPERTY(Column, __get_Column, __set_Column, 0x28);
 		T_PROPERTY(PlantState::PlantState, State, __get_State, __set_State, 0x3C);
 		INT_PROPERTY(Hp, __get_Hp, __set_Hp, 0x40);
@@ -701,7 +701,7 @@ namespace PVZ
 		int BaseAddress;
 	public:
 		GardenPlant(int address);
-		T_PROPERTY(PlantType::PlantType, Type, __get_Type, __set_Type, 8);
+		T_PROPERTY(SeedType::SeedType, Type, __get_Type, __set_Type, 8);
 		T_PROPERTY(GardenScene::GardenScene, Location, __get_Location, __set_Location, 0xC);
 		INT_PROPERTY(Column, __get_Column, __set_Column, 0x10);
 		INT_PROPERTY(Row, __get_Row, __set_Row, 0x14);
@@ -812,7 +812,7 @@ namespace PVZ
 		Vase(int indexoraddress) :Griditem(indexoraddress) {};
 		T_PROPERTY(VaseSkin::VaseSkin, Skin, __get_Skin, __set_Skin, 0xC);
 		T_PROPERTY(ZombieType::ZombieType, ContentZombie, __get_ContentZombie, __set_ContentZombie, 0x3C);
-		T_PROPERTY(PlantType::PlantType, ContentPlant, __get_ContentPlant, __set_ContentPlant, 0x40);
+		T_PROPERTY(SeedType::SeedType, ContentPlant, __get_ContentPlant, __set_ContentPlant, 0x40);
 		T_PROPERTY(VaseContent::VaseContent, Content, __get_Content, __set_Content, 0x44);
 		T_READONLY_PROPERTY(BOOLEAN, MouseEnter, __get_MouseEnter, 0x48);
 		INT_PROPERTY(TransparentCountDown, __get_TransparentCountDown, __set_TransparentCountDown, 0x4C);
@@ -1028,7 +1028,7 @@ namespace PVZ
 	{
 		int BaseAddress;
 	public:
-		PlantDefinition(PlantType::PlantType type);
+		PlantDefinition(SeedType::SeedType type);
 		T_READONLY_PROPERTY(SeedType::SeedType, Type, __get_Type, 0);
 		T_READONLY_PROPERTY(AnimationType::AnimationType, AnimType, __get_AnimType, 8);
 		INT_READONLY_PROPERTY(PacketID, __get_PacketID, 0xC);
@@ -1086,7 +1086,7 @@ namespace PVZ
 	SPT<SaveData> GetSaveData();
 	SPT<Music> GetMusic();
 	SPT<ZenGarden> GetZenGarden();
-	SPT<PlantDefinition> GetPlantDefinition(PlantType::PlantType type);
+	SPT<PlantDefinition> GetPlantDefinition(SeedType::SeedType type);
 	SPT<ZombieDefinition> GetZombieDefinition(ZombieType::ZombieType type);
 	SPT<ProjectileDefinition> GetProjectileDefinition(ProjectileType::ProjectileType type);
 	SPT<ChallengeDefinition> GetChallengeDefinition(PVZLevel::PVZLevel mode);

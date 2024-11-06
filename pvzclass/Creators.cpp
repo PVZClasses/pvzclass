@@ -60,10 +60,10 @@ byte __asm__CreatePlant[35]
 	RET,
 };
 
-SPT<PVZ::Plant> Creator::CreatePlant(PlantType::PlantType type, int row, byte column, BOOLEAN imitative)
+SPT<PVZ::Plant> Creator::CreatePlant(SeedType::SeedType type, int row, byte column, BOOLEAN imitative)
 {
 	if (imitative)__asm__CreatePlant[6] = type;
-	__asm__CreatePlant[8] = imitative ? PlantType::Imitater : type;
+	__asm__CreatePlant[8] = imitative ? SeedType::Imitater : type;
 	__asm__CreatePlant[10] = column;
 	SETARG(__asm__CreatePlant, 1) = row;
 	SETARG(__asm__CreatePlant, 12) = PVZBASEADDRESS;
@@ -278,7 +278,7 @@ SPT<PVZ::Griditem> Creator::CreateLadder(int row, byte column)
 	return MKS<PVZ::Griditem>(PVZ::Memory::Execute(STRING(__asm__CreateLadder)));
 }
 
-SPT<PVZ::Vase> Creator::CreateVase(int row, int column, VaseContent::VaseContent content, VaseSkin::VaseSkin skin, ZombieType::ZombieType zombie, PlantType::PlantType plant, int sun)
+SPT<PVZ::Vase> Creator::CreateVase(int row, int column, VaseContent::VaseContent content, VaseSkin::VaseSkin skin, ZombieType::ZombieType zombie, SeedType::SeedType plant, int sun)
 {
 	SPT<PVZ::Vase> vase = MKS<PVZ::Vase>(CreateGriditem()->GetBaseAddress());
 	vase->Row = row;

@@ -183,7 +183,7 @@ SPT<PVZ::Projectile> PVZ::Plant::Shoot(MotionType::MotionType motiontype, int ta
 	}
 	SETARG(__asm__Shoot, 10) = BaseAddress;
 	SETARG(__asm__Shoot, 29) = Memory::Variable;
-	if (Type == PlantType::Starfruit)
+	if (Type == SeedType::Starfruit)
 	{
 		Memory::Execute(STRING(__asm__Shoot));
 		return NULL;

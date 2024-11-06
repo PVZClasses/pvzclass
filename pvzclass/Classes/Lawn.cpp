@@ -32,7 +32,7 @@ void PVZ::Lawn::SetRouteType(int route, RouteType::RouteType type)
 		Memory::WriteMemory<RouteType::RouteType>(BaseAddress + 0x5D8 + 4 * route, type);
 };
 
-bool PVZ::Lawn::Plantable(int row, int column, PlantType::PlantType type)
+bool PVZ::Lawn::Plantable(int row, int column, SeedType::SeedType type)
 {
 	SETARG(__asm__Plantable, 1) = row;
 	SETARG(__asm__Plantable, 6) = type;

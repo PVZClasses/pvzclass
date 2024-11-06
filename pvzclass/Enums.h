@@ -13,7 +13,6 @@
 #include "Enums/ZombieAccessoriesType1.h"
 #include "Enums/ZombieAccessoriesType2.h"
 #include "Enums/DamageType.h"
-#include "Enums/PlantType.h"
 #include "Enums/PlantEffectType.h"
 #include "Enums/MotionType.h"
 #include "Enums/ProjectileType.h"

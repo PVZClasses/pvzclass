@@ -90,3 +90,7 @@ namespace CardType
 {
 	typedef SeedType::SeedType CardType;
 }
+namespace PlantType
+{
+	typedef SeedType::SeedType PlantType;
+}

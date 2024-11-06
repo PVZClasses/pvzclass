@@ -52,7 +52,7 @@ inline void xytorc(int* x, int* y)
 	//僵王博士将会被强制生成在 0 行 0 列。
 	SPT<PVZ::Zombie> CreateZombie(ZombieType::ZombieType type, int row, byte column);
 
-	SPT<PVZ::Plant> CreatePlant(PlantType::PlantType type, int row, byte column, BOOLEAN imitative = false);
+	SPT<PVZ::Plant> CreatePlant(SeedType::SeedType type, int row, byte column, BOOLEAN imitative = false);
 
 	SPT<PVZ::Projectile> CreateProjectile(ProjectileType::ProjectileType type, byte row, int x);
 
@@ -77,7 +77,7 @@ inline void xytorc(int* x, int* y)
 
 	SPT<PVZ::Griditem> CreateLadder(int row, byte column);
 
-	SPT<PVZ::Vase> CreateVase(int row, int column, VaseContent::VaseContent content, VaseSkin::VaseSkin skin = VaseSkin::VaseSkinUnknow, ZombieType::ZombieType zombie = ZombieType::Zombie, PlantType::PlantType plant = PlantType::Peashooter, int sun = 0);
+	SPT<PVZ::Vase> CreateVase(int row, int column, VaseContent::VaseContent content, VaseSkin::VaseSkin skin = VaseSkin::VaseSkinUnknow, ZombieType::ZombieType zombie = ZombieType::Zombie, SeedType::SeedType plant = SeedType::Peashooter, int sun = 0);
 
 	SPT<PVZ::Portal> CreatePortal(int row, int column, int isYellow = 0);
 	
@@ -88,7 +88,7 @@ inline void xytorc(int* x, int* y)
 		VaseContent::VaseContent content;
 		VaseSkin::VaseSkin skin;
 		ZombieType::ZombieType zombie;
-		PlantType::PlantType plant;
+		SeedType::SeedType plant;
 		int sun;
 	};
 

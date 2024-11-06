@@ -136,7 +136,7 @@ SPT<PVZ::ZenGarden> PVZ::GetZenGarden()
 	return MKS<ZenGarden>(Memory::ReadPointer(0x6A9EC0, 0x81C));
 }
 
-SPT<PVZ::PlantDefinition> PVZ::GetPlantDefinition(PlantType::PlantType type)
+SPT<PVZ::PlantDefinition> PVZ::GetPlantDefinition(SeedType::SeedType type)
 {
 	return MKS<PlantDefinition>(type);
 }

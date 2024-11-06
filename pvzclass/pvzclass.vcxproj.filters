@@ -93,9 +93,6 @@
     <ClCompile Include="Enums\ProjectileType.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
-    <ClCompile Include="Enums\PlantType.cpp">
-      <Filter>源文件\Enums</Filter>
-    </ClCompile>
     <ClCompile Include="Enums\PlantState.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
@@ -405,9 +402,6 @@
       <Filter>头文件\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Enums\ProjectileType.h">
-      <Filter>头文件\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="Enums\PlantType.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Enums\PlantState.h">

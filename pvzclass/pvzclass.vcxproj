@@ -160,6 +160,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Classes\AttachEffect.cpp" />
     <ClCompile Include="Classes\ChallengeScreen.cpp" />
     <ClCompile Include="Classes\Animation.cpp" />
     <ClCompile Include="Classes\Attachment.cpp" />
@@ -173,6 +174,7 @@
     <ClCompile Include="Classes\Lawn.cpp" />
     <ClCompile Include="AsmFunctions.cpp" />
     <ClCompile Include="Classes\Lawnmover.cpp" />
+    <ClCompile Include="Classes\Matrix3.cpp" />
     <ClCompile Include="Classes\Memory.cpp" />
     <ClCompile Include="Classes\Miscellaneous.cpp" />
     <ClCompile Include="Classes\Mouse.cpp" />

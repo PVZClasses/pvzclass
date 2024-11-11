@@ -235,6 +235,7 @@ namespace PVZ
 		Image(int address) : BaseClass(address){};
 	};
 
+	class Attachment;
 	class Zombie;
 	class Plant;
 	class Projectile;
@@ -256,6 +257,14 @@ namespace PVZ
 		INT_PROPERTY(ViewY,			__get_ViewY,		__set_ViewY,		0x34);
 		INT_PROPERTY(ViewLength,	__get_ViewLength,	__set_ViewLength,	0x38);
 		INT_PROPERTY(ViewHeight,	__get_ViewHeight,	__set_ViewHeight,	0x3C);
+	};
+	class Matrix3 : public BaseClass
+	{
+	public:
+		Matrix3(DWORD address) : BaseClass(address) {};
+
+		// @brief 根据指定的平移坐标、旋转弧度和拉伸比例，设定矩阵每个项的数值。
+		void ScaleRotateTransformMatrix(float x, float y, float rad, float ScaleX, float ScaleY);
 	};
 	class Board : public Widget
 	{
@@ -400,6 +409,7 @@ namespace PVZ
 	{
 	public:
 		AttachEffect(int address) : BaseClass(address) {};
+		SPT<Matrix3> GetOffset();
 	};
 	class Animation
 	{

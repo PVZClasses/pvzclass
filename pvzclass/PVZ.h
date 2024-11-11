@@ -236,6 +236,7 @@ namespace PVZ
 	};
 
 	class Attachment;
+	class AttachmentID;
 	class Zombie;
 	class Plant;
 	class Projectile;
@@ -446,7 +447,7 @@ namespace PVZ
 		T_PROPERTY(PaintState::PaintState, Paint, __get_Paint, __set_Paint, 0x98);
 		INT_READONLY_PROPERTY(Id, __get_Id, 0x9C);
 		READONLY_PROPERTY_BINDING(int, __get_Index, Id & 0xFFFF) Index;
-		SPT<AttachEffect> AttachTo(Attachment* attachment, float OffsetX, float OffsetY);
+		SPT<AttachEffect> AttachTo(AttachmentID* attachmentID, float OffsetX, float OffsetY);
 		void Die();
 		void Play(const char* TrackName, int blendType, int loopType, float rate);
 		void AssignRenderGroupToPrefix(byte RenderGroup, const char* TrackName);
@@ -467,11 +468,17 @@ namespace PVZ
 		SPT<PVZ::Animation> GetAnimation();
 		INT_READONLY_PROPERTY(Id, __get_Id, 0x308);
 	};
+	class AttachmentID : public BaseClass
+	{
+	public:
+		AttachmentID(DWORD address) : BaseClass(address) {};
+	};
 	class TrackInstance : public BaseClass
 	{
 	public:
 		TrackInstance(int idoraddress);
-		SPT<PVZ::Attachment> GetAttachment();
+		SPT<AttachmentID> GetAttachmentID();
+		SPT<Attachment> GetAttachment();
 	};
 	class Lawn
 	{

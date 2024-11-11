@@ -9,6 +9,7 @@ byte __asm_TodScaleRotateTransformMatrix[] =
 	PUSHDWORD(0),
 	MOV_ESI(0),
 	INVOKE(0x5125D0),
+	ADD_ESP(0x14),
 	RET
 };
 

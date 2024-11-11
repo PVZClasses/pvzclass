@@ -3,6 +3,8 @@
 
 namespace PVZ
 {
+	class PVZApp;
+	class Widget;
 	//选关界面。
 	class ChallengeScreen : public Widget
 	{

@@ -457,11 +457,9 @@ namespace PVZ
 		SPT<PVZ::Animation> GetAnimation();
 		INT_READONLY_PROPERTY(Id, __get_Id, 0x308);
 	};
-	class TrackInstance
+	class TrackInstance : public BaseClass
 	{
-		int BaseAddress;
 	public:
-		int GetBaseAddress();
 		TrackInstance(int idoraddress);
 		SPT<PVZ::Attachment> GetAttachment();
 	};

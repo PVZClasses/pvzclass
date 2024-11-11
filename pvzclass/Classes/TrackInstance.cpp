@@ -1,11 +1,6 @@
 #include "../PVZ.h"
 
-int PVZ::TrackInstance::GetBaseAddress()
-{
-	return BaseAddress;
-}
-
-PVZ::TrackInstance::TrackInstance(int idoraddress)
+PVZ::TrackInstance::TrackInstance(int idoraddress) : BaseClass(0)
 {
 	if (idoraddress >= 1024)
 		this->BaseAddress = idoraddress;

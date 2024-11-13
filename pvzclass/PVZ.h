@@ -1097,6 +1097,7 @@ namespace PVZ
 
 #pragma region methods
 
+	void InitImages();
 	SPT<Mouse> GetMouse();
 	//若 BaseAddress 为 0，返回空指针
 	SPT<Board> GetBoard();

@@ -23,6 +23,7 @@ byte __asm__UpdateHook[]
 
 namespace PVZ
 {
+	// 在使用 Resource 类的静态成员前，应当先调用此函数。
 	void InitImages()
 	{
 		PVZ::Resource::IMAGE_BLANK = new Image(Memory::ReadMemory<DWORD>(0x6A77BC));

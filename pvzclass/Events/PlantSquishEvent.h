@@ -1,16 +1,30 @@
 ﻿#pragma once
-#include "TemplateEvent.h"
+#include "DLLEvent.h"
 
 // 植物被碾压事件。
-// 多个事件之间植物会串联修改。
-// 该事件需要测试。
-// @param 触发事件的植物、是否取消该事件。
-// @return 更新后被碾压的植物。
-class PlantSquishEvent : public TemplateEvent<std::function<
-	SPT<PVZ::Plant>(SPT<PVZ::Plant>, bool&)> >
+// @param 触发事件的植物。
+// @return 更新后被碾压的植物。返回空指针时该事件被取消。
+class PlantSquishEvent : public DLLEvent
 {
 public:
 	PlantSquishEvent();
-	void handle(CONTEXT& context) override;
 };
 
+PlantSquishEvent::PlantSquishEvent()
+{
+	int procAddress = PVZ::Memory::GetProcAddress("onPlantSquish");
+	hookAddress = 0x462B80;
+	rawlen = 6;
+	BYTE code[] =
+	{
+		PUSH_PTR_ESP_ADD_V(0x24),
+		INVOKE(procAddress),
+		ADD_ESP(4),
+		TEST_EUX_EVX(REG_EAX, REG_EAX),
+		JNZ(4),
+		POPAD,
+		RETN(4),
+		MOV_PTR_ESP_ADD_V_EUX(REG_EAX, 0x24)
+	};
+	start(STRING(code));
+}

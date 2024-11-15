@@ -97,6 +97,23 @@ void PVZ::Board::Lose()
 		pvz->GameState = PVZGameState::Losing;
 }
 
+byte __asm__Board_TakeSunMoney[] =
+{
+	MOV_EBX(0),
+	MOV_EDI(0),
+	INVOKE(0x41BA60),
+	MOV_PTR_ADDR_EAX(0),
+	RET
+};
+
+bool PVZ::Board::TakeSunMoney(int amount)
+{
+	SETARG(__asm__Board_TakeSunMoney, 1) = amount;
+	SETARG(__asm__Board_TakeSunMoney, 6) = this->BaseAddress;
+	SETARG(__asm__Board_TakeSunMoney, 24) = PVZ::Memory::Variable;
+	return(static_cast<bool>(Memory::Execute(STRING(__asm__Board_TakeSunMoney))));
+}
+
 void PVZ::Board::Win()
 {
 	SETARG(__asm__Win, 1) = this->BaseAddress;

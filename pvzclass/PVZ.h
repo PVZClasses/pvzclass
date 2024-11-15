@@ -340,6 +340,11 @@ namespace PVZ
 		void Bell(int countdown = 1);
 		void Earthquake(int horizontalAmplitude = 2, int verticalAmplitude = 4, int duration = 20);
 		void Lose();
+		// @brief 若当前可以承担 amount 点阳光的支出，则消耗 theAmount 阳光，
+		//	否则触发阳光数量不足的的音效和闪红特效。
+		// @param amount 阳光消耗数值。
+		// @return 是否可以承担支出。
+		bool TakeSunMoney(int amount);
 		void Win();
 		bool Save(const char* path, int pathlen);
 		bool Load(const char* path, int pathlen);

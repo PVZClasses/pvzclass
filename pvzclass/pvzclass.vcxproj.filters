@@ -608,5 +608,8 @@
     <ClInclude Include="Events\ZombieUpdateActionEvent.hpp">
       <Filter>头文件\Events\Zombie</Filter>
     </ClInclude>
+    <ClInclude Include="Events\ZombieUpdatePlayingEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -97,10 +97,10 @@ SPT<PVZ::TrackInstance> PVZ::Animation::GetTrackInstance(const char* trackName)
 	return MKS<TrackInstance>(this->FindTrackIndex(trackName) * 0x60 + address);
 }
 
-SPT<PVZ::AttachEffect> PVZ::Animation::AttachTo(int ptr_AttachmentID, float OffsetX, float OffsetY)
+SPT<PVZ::AttachEffect> PVZ::Animation::AttachTo(PVZ::AttachmentID* attachmentID, float OffsetX, float OffsetY)
 {
 	SETARG(__asm__Reanimation__AttachTo, 1) = BaseAddress;
-	SETARG(__asm__Reanimation__AttachTo, 6) = ptr_AttachmentID;
+	SETARG(__asm__Reanimation__AttachTo, 6) = attachmentID->GetBaseAddress();
 	SETARGFLOAT(__asm__Reanimation__AttachTo, 11) = OffsetY;
 	SETARGFLOAT(__asm__Reanimation__AttachTo, 17) = OffsetX;
 	SETARG(__asm__Reanimation__AttachTo, 39) = PVZ::Memory::Variable;
@@ -140,6 +140,22 @@ int PVZ::Animation::FindTrackIndex(const char* trackName)
 	SETARG(__asm__Reanimation__FindTrackIndex, 6) = PVZ::Memory::Variable + 100;
 	SETARG(__asm__Reanimation__FindTrackIndex, 24) = PVZ::Memory::Variable;
 	return(PVZ::Memory::Execute(STRING(__asm__Reanimation__FindTrackIndex)));
+}
+
+byte __asm__Reanimation_SetFramesForLayer[]
+{
+	PUSHDWORD(0),
+	MOV_ECX(0),
+	INVOKE(0x473280),
+	RET
+};
+
+void PVZ::Animation::SetFramesForLayer(const char* theTrackName)
+{
+	PVZ::Memory::WriteArray<const char>(PVZ::Memory::Variable + 100, theTrackName, std::strlen(theTrackName) + 1);
+	SETARG(__asm__Reanimation_SetFramesForLayer, 1) = PVZ::Memory::Variable + 100;
+	SETARG(__asm__Reanimation_SetFramesForLayer, 6) = this->BaseAddress;
+	PVZ::Memory::Execute(STRING(__asm__Reanimation_SetFramesForLayer));
 }
 
 byte __asm__Reanimation_SetImageOverride[]

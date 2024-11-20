@@ -16,7 +16,7 @@ byte __asm__Plant_memset[]
 	0x89, 0x3C, 0x18,
 	ADD_EUX(REG_EAX, 4),
 	CMP_EUX_DWORD(REG_EAX, 0),
-	JNG(-14),
+	JNG(242), // -14
 	POP_EUX(REG_EAX),
 	JMPFAR(0)
 };
@@ -183,7 +183,7 @@ SPT<PVZ::Projectile> PVZ::Plant::Shoot(MotionType::MotionType motiontype, int ta
 	}
 	SETARG(__asm__Shoot, 10) = BaseAddress;
 	SETARG(__asm__Shoot, 29) = Memory::Variable;
-	if (Type == PlantType::Starfruit)
+	if (Type == SeedType::Starfruit)
 	{
 		Memory::Execute(STRING(__asm__Shoot));
 		return NULL;

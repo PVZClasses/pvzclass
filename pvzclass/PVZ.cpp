@@ -1,5 +1,7 @@
 ﻿#include "PVZ.h"
 
+PVZ::Image* PVZ::Resource::IMAGE_BLANK = nullptr;
+
 /*
 	0x530: active 为1时阻塞游戏更新，执行完Execute之后改为0
 	0x540: enable 为1时代表可以执行Execute
@@ -21,6 +23,12 @@ byte __asm__UpdateHook[]
 
 namespace PVZ
 {
+	// 在使用 Resource 类的静态成员前，应当先调用此函数。
+	void InitImages()
+	{
+		PVZ::Resource::IMAGE_BLANK = new Image(Memory::ReadMemory<DWORD>(0x6A77BC));
+	}
+
 	void InitPVZ(DWORD pid)
 	{
 		Memory::processId = pid;
@@ -39,6 +47,8 @@ namespace PVZ
 		Memory::WriteArray<BYTE>(Memory::Variable + 0x500, STRING(__asm__Execute));
 		SETARG(__asm__UpdateHook, 1) = Memory::Variable + 0x500 - 0x415D40 - 5;
 		Memory::WriteArray<BYTE>(0x415D40, STRING(__asm__UpdateHook));
+
+		InitImages();
 	}
 
 	void QuitPVZ()
@@ -136,7 +146,7 @@ SPT<PVZ::ZenGarden> PVZ::GetZenGarden()
 	return MKS<ZenGarden>(Memory::ReadPointer(0x6A9EC0, 0x81C));
 }
 
-SPT<PVZ::PlantDefinition> PVZ::GetPlantDefinition(PlantType::PlantType type)
+SPT<PVZ::PlantDefinition> PVZ::GetPlantDefinition(SeedType::SeedType type)
 {
 	return MKS<PlantDefinition>(type);
 }

@@ -1,3 +1,4 @@
+#include "../PVZ.h"
 #include "ChallengeScreen.hpp"
 
 namespace PVZ

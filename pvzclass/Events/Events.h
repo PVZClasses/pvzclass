@@ -42,3 +42,5 @@
 #include "PlantSquishEvent.h"
 #include "GriditemUpdateEvent.hpp"
 #include "ZombieInitAfterEvent.hpp"
+#include "IZInitAfterBrainEvent.hpp"
+#include "ZombieDropLootEvent.hpp"

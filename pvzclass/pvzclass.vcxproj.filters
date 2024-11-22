@@ -623,5 +623,8 @@
     <ClInclude Include="Events\ZombieInitAfterEvent.hpp">
       <Filter>头文件\Events\Zombie</Filter>
     </ClInclude>
+    <ClInclude Include="Events\IZInitAfterBrainEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

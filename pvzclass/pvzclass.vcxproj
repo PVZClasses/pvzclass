@@ -278,7 +278,7 @@
     <ClInclude Include="Events\UpdateAppEvent.h" />
     <ClInclude Include="Events\ZombieDropLootEvent.hpp" />
     <ClInclude Include="Events\ZombieEatEvent.h" />
-    <ClInclude Include="Events\ZombieHitEvent.h" />
+    <ClInclude Include="Events\ZombieTakeDmgEvent.h" />
     <ClInclude Include="Enums\LawnmoverState.h" />
     <ClInclude Include="Creators.h" />
     <ClInclude Include="Enums.h" />

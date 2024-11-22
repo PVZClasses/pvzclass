@@ -41,3 +41,4 @@
 #include "PlantDoSpecialEvent.hpp"
 #include "PlantSquishEvent.h"
 #include "GriditemUpdateEvent.hpp"
+#include "ZombieInitAfterEvent.hpp"

@@ -620,5 +620,8 @@
     <ClInclude Include="Events\GriditemUpdateEvent.hpp">
       <Filter>头文件\Events</Filter>
     </ClInclude>
+    <ClInclude Include="Events\ZombieInitAfterEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

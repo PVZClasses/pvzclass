@@ -39,3 +39,4 @@
 #include "ZombieUpdatePlayingEvent.hpp"
 
 #include "PlantDoSpecialEvent.hpp"
+#include "PlantSquishEvent.h"

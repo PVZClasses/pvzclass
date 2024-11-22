@@ -494,9 +494,6 @@
     <ClInclude Include="Events\PlantShootEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Events\PlantSquishEvent.h">
-      <Filter>头文件\Events</Filter>
-    </ClInclude>
     <ClInclude Include="Events\ProjectileCreateEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
@@ -615,6 +612,9 @@
       <Filter>头文件\Events\Zombie</Filter>
     </ClInclude>
     <ClInclude Include="Events\PlantDoSpecialEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantSquishEvent.h">
       <Filter>头文件\Events\Plant</Filter>
     </ClInclude>
   </ItemGroup>

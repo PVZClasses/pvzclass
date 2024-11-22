@@ -37,3 +37,5 @@
 #include "ZombieRemoveEvent.h"
 #include "ZombieUpdateActionEvent.hpp"
 #include "ZombieUpdatePlayingEvent.hpp"
+
+#include "PlantDoSpecialEvent.hpp"

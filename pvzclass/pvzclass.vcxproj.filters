@@ -46,6 +46,9 @@
     <Filter Include="头文件\Events\Zombie">
       <UniqueIdentifier>{fbcdc89d-f37a-485c-a126-79bd99444fbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Plant">
+      <UniqueIdentifier>{a01de3c0-76ec-4877-8db8-fe672099eb46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -610,6 +613,9 @@
     </ClInclude>
     <ClInclude Include="Events\ZombieUpdatePlayingEvent.hpp">
       <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantDoSpecialEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

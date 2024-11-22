@@ -266,6 +266,7 @@
     <ClInclude Include="Events\IZScoreBrainEvent.hpp" />
     <ClInclude Include="Events\LawnmowerStartEvent.hpp" />
     <ClInclude Include="Events\NewGameEvent.h" />
+    <ClInclude Include="Events\PlantDoSpecialEvent.hpp" />
     <ClInclude Include="Events\PlantSquishEvent.h" />
     <ClInclude Include="Events\TemplateEvent.h" />
     <ClInclude Include="Events\EventHandler.h" />

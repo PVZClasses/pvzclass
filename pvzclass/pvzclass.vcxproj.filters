@@ -488,7 +488,7 @@
     <ClInclude Include="Events\PlantReloadEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Events\PlantRemoveEvent.h">
+    <ClInclude Include="Events\PlantDieEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
     <ClInclude Include="Events\PlantShootEvent.h">

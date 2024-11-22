@@ -325,7 +325,7 @@
     <ClInclude Include="Injectors.h" />
     <ClInclude Include="Events\PlantCreateEvent.h" />
     <ClInclude Include="Events\CoinCreateEvent.h" />
-    <ClInclude Include="Events\PlantRemoveEvent.h" />
+    <ClInclude Include="Events\PlantDieEvent.h" />
     <ClInclude Include="Enums\MagnetItemType.h" />
     <ClInclude Include="Events\PlantReloadEvent.h" />
     <ClInclude Include="ProcessOpener.h" />

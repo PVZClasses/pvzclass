@@ -38,6 +38,7 @@
 #include "ZombieUpdateActionEvent.hpp"
 #include "ZombieUpdatePlayingEvent.hpp"
 
+#include "CalcSunCostEvent.hpp"
 #include "PlantDoSpecialEvent.hpp"
 #include "PlantSquishEvent.h"
 #include "GriditemUpdateEvent.hpp"

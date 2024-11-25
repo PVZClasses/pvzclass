@@ -1,5 +1,5 @@
 # TOC
-- [1.16.3（TBD）](#1.16.3（TBD）)
+- [1.17（TBD）](#1.16.3（TBD）)
 - [1.16.2](#1.16.2（2024/10/19）)
 - [1.16.1](#1.16.1（2024/10/2）)
 - [1.16](#1.16（2024/9/6）)
@@ -13,11 +13,31 @@
 
 ### 新增内容
 
-（待定）
+- `Animation` 类新增 `Type` 成员和 `SetFramesForLayer()` 成员函数。
+- `ZombieUpdateActionEvent` 事件，对应僵尸行为动作的更新。
+- `ZombieUpdatePlayingEvent` 事件，被冻结、黄油定身时也会触发的存活僵尸的更新。
+- `Resource` 类，含有对应资源对象的静态成员变量。
+  - 需要用 `InitImages()` 初始化。
+- `Matrix3` 类，用于存储一个三维矩阵。
+  - 含有 `ScaleRotateTransformMatrix()` 成员函数，用于将当前类变为指定变换的变换矩阵。
+- `Board` 新增 `TakeSunMoney()` 成员函数，用于自动判断阳光是否足够的同时扣除阳光。
+
+### 改动
+
+- `Injector` 重做。现在它的代码必须在构造时就指明，不能动态更换。
+- 枚举 `ZombieAccessoriesType1` 被更名为 `HelmType`。
+- `TrackInstance` 现在是 `BaseClass` 的派生类。
+- `Animation::AttachTo()` 调整了参数，使其现在可以容易地使用。
+- `PlantSquishEvent` 现在是 `DLLEvent` 的派生类。
+
+### 移除内容
+
+- `CT` 文件夹。
+- 枚举 `CardType` 和 `PlantType`。它们被合并到 `SeedType` 中。
 
 ### 兼容性
 
-- 可以不兼容 1.16.x。
+- 由于 Enum 方面的改动，不兼容 1.16.x。
 
 ## 1.16.2（2024/10/19）
 

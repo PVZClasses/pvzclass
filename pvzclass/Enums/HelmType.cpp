@@ -24,13 +24,3 @@ const char* HelmType::ToString(HelmType zombieat1)
 		return "InValid_Value_Of_ZombieAccessoriesType1None";
 	}
 }
-
-namespace ZombieAccessoriesType1
-{
-	// Deprecated
-	typedef HelmType::HelmType ZombieAccessoriesType1;
-	const char* ToString(ZombieAccessoriesType1 zombieat1)
-	{
-		return(HelmType::ToString(zombieat1));
-	}
-}

@@ -84,16 +84,3 @@ namespace SeedType
 	extern const char* ToString(SeedType cardt);
 
 }
-
-namespace CardType
-{
-	// Deprecated
-	typedef SeedType::SeedType CardType;
-	const char* ToString(CardType cardt);
-}
-namespace PlantType
-{
-	// Deprecated
-	typedef SeedType::SeedType PlantType;
-	const char* ToString(PlantType plantt);
-}

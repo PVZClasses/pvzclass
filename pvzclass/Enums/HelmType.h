@@ -17,3 +17,5 @@ namespace HelmType
 	extern const char* ToString(HelmType zombieat1);
 
 }
+
+#define ZombieAccessoriesType1 HelmType

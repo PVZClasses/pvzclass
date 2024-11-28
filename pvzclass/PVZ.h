@@ -183,14 +183,6 @@ namespace PVZ
 
 #pragma region structs
 
-	struct CollisionBox
-	{
-		int X;
-		int Y;
-		int Width;
-		int Height;
-	};
-
 	struct Color
 	{
 		int Red;
@@ -214,6 +206,25 @@ namespace PVZ
 			return(this->BaseAddress);
 		}
 	};
+
+	class Rect
+	{
+	public:
+		int X;
+		int Y;
+		int Width;
+		int Height;
+		// 判定坐标为 (X, Y)，半径为 radius 的圆与该矩阵是否有重叠部分。
+		// 相切会视为有重叠部分。
+		bool IsCircleOverlap(const int X, const int Y, const int radius);
+	};
+	// 取得两个矩形横向重叠部分的长度。
+	// 若横向无重叠部分，返回两矩形横向间距的相反数。
+	// @param rect 计算重叠的另一个矩形。
+	// @return 矩形横向重叠的长度，或矩形横向间距的相反数。
+	int GetXOverlap(const Rect* rect1, const Rect* rect2);
+
+	typedef Rect CollisionBox;
 
 	class PVZutil
 	{

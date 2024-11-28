@@ -182,6 +182,7 @@
     <ClCompile Include="Classes\Music.cpp" />
     <ClCompile Include="Classes\Plant.cpp" />
     <ClCompile Include="Classes\PVZApp.cpp" />
+    <ClCompile Include="Classes\Rect.cpp" />
     <ClCompile Include="Classes\SaveData.cpp" />
     <ClCompile Include="Classes\SeedCard.cpp" />
     <ClCompile Include="Classes\SeedChoserScreen.cpp" />

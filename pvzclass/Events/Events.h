@@ -17,6 +17,7 @@
 #include "PlantReloadEvent.h"
 #include "PlantDieEvent.h"
 #include "PlantShootEvent.h"
+#include "PlantUpdateAbilityEvent.hpp"
 #include "PeaOnFireEvent.h"
 #include "ProjectileCollisionEvent.h"
 #include "ProjectileCreateEvent.h"

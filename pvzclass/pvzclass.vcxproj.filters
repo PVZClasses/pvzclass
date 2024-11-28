@@ -632,5 +632,8 @@
     <ClInclude Include="Events\CalcSunCostEvent.hpp">
       <Filter>头文件\Events</Filter>
     </ClInclude>
+    <ClInclude Include="Events\PlantUpdateAbilityEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

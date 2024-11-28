@@ -84,3 +84,6 @@ namespace SeedType
 	extern const char* ToString(SeedType cardt);
 
 }
+
+#define CardType SeedType
+#define PlantType SeedType

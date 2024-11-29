@@ -611,6 +611,8 @@ namespace PVZ
 		void SetAccessoriesType2(AccessoriesType2 acctype2);
 		void GetBodyHp(int* hp, int* maxhp);
 		void SetBodyHp(int hp, int maxhp);
+		INT_PROPERTY(FlyingHealth, __get_FlyingHealth, __set_FlyingHealth, 0x0E4);
+		INT_PROPERTY(FlyingMaxHealth, __get_FlyingMaxHealth, __set_FlyingMaxHealth, 0xE8);
 		T_PROPERTY(BOOLEAN, NotExist, __get_NotExist, __set_NotExist, 0xEC);
 		SPT<PVZ::Animation> GetAnimation();
 		T_PROPERTY(FLOAT, Size, __get_Size, __set_Size, 0x11C);

@@ -47,8 +47,6 @@ namespace PVZ
 		Memory::WriteArray<BYTE>(Memory::Variable + 0x500, STRING(__asm__Execute));
 		SETARG(__asm__UpdateHook, 1) = Memory::Variable + 0x500 - 0x415D40 - 5;
 		Memory::WriteArray<BYTE>(0x415D40, STRING(__asm__UpdateHook));
-
-		InitImages();
 	}
 
 	void QuitPVZ()

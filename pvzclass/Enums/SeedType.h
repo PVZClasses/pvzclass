@@ -85,15 +85,5 @@ namespace SeedType
 
 }
 
-namespace CardType
-{
-	// Deprecated
-	typedef SeedType::SeedType CardType;
-	const char* ToString(CardType cardt);
-}
-namespace PlantType
-{
-	// Deprecated
-	typedef SeedType::SeedType PlantType;
-	const char* ToString(PlantType plantt);
-}
+#define CardType SeedType
+#define PlantType SeedType

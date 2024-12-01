@@ -158,13 +158,3 @@ const char* SeedType::ToString(SeedType cardt)
 		return "InValid_Value_Of_SeedType";
 	}
 }
-
-const char* CardType::ToString(CardType cardt)
-{
-	return(SeedType::ToString(cardt));
-}
-
-const char* PlantType::ToString(PlantType plantt)
-{
-	return(SeedType::ToString(plantt));
-}

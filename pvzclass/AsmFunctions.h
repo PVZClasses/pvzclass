@@ -142,6 +142,7 @@
 #define TEST_EUX_EVX(ux,vx) 0x85,0xC0+(ux)+(vx)*8
 
 #define CALL_EUX(ux) 0xFF,0xD0+(ux)
+#define JMP_REG32(reg32) 0xFF,0xE0+(reg32)
 
 //Not for esp
 #define PUSH_PTR_EUX_ADD_V(ux,v)	0xFF,0x70+(ux),v

@@ -29,6 +29,16 @@
 #define T_PROPERTY(type,propname,getmethod,setmethod,offset) PROPERTY_BINDING(type,getmethod,Memory::ReadMemory<type>(BaseAddress+offset),setmethod,Memory::WriteMemory<type>(BaseAddress+offset,value)) propname
 #define T_READONLY_PROPERTY(type,propname,getmethod,offset) READONLY_PROPERTY_BINDING(type,getmethod,Memory::ReadMemory<type>(BaseAddress+offset)) propname
 
+#define INT_ARRAY_PROPERTY(getmethod,setmethod,offset) inline int getmethod(int index) \
+	{ return Memory::ReadMemory<int>(BaseAddress+offset+index*4)); } \
+	inline void setmethod(int index, int value) \
+	{ return Memory::WriteMemory<int>(BaseAddress+offset+index*4, value)); } \
+
+#define T_ARRAY_PROPERTY(type,getmethod,setmethod,offset,size) inline type getmethod(int index) \
+	{ return Memory::ReadMemory<type>(BaseAddress+offset+index*size)); } \
+	inline void setmethod(int index, type value) \
+	{ return Memory::WriteMemory<type>(BaseAddress+offset+index*size, value)); } \
+
 #define LOGICALINCLUDE(c,v) (c&v)==v
 
 #define SPT std::shared_ptr 
@@ -173,14 +183,6 @@ namespace PVZ
 
 #pragma region structs
 
-	struct CollisionBox
-	{
-		int X;
-		int Y;
-		int Width;
-		int Height;
-	};
-
 	struct Color
 	{
 		int Red;
@@ -204,6 +206,25 @@ namespace PVZ
 			return(this->BaseAddress);
 		}
 	};
+
+	class Rect
+	{
+	public:
+		int X;
+		int Y;
+		int Width;
+		int Height;
+		// 判定坐标为 (X, Y)，半径为 radius 的圆与该矩阵是否有重叠部分。
+		// 相切会视为有重叠部分。
+		bool IsCircleOverlap(const int X, const int Y, const int radius);
+	};
+	// 取得两个矩形横向重叠部分的长度。
+	// 若横向无重叠部分，返回两矩形横向间距的相反数。
+	// @param rect 计算重叠的另一个矩形。
+	// @return 矩形横向重叠的长度，或矩形横向间距的相反数。
+	int GetXOverlap(const Rect* rect1, const Rect* rect2);
+
+	typedef Rect CollisionBox;
 
 	class PVZutil
 	{
@@ -590,6 +611,8 @@ namespace PVZ
 		void SetAccessoriesType2(AccessoriesType2 acctype2);
 		void GetBodyHp(int* hp, int* maxhp);
 		void SetBodyHp(int hp, int maxhp);
+		INT_PROPERTY(FlyingHealth, __get_FlyingHealth, __set_FlyingHealth, 0x0E4);
+		INT_PROPERTY(FlyingMaxHealth, __get_FlyingMaxHealth, __set_FlyingMaxHealth, 0xE8);
 		T_PROPERTY(BOOLEAN, NotExist, __get_NotExist, __set_NotExist, 0xEC);
 		SPT<PVZ::Animation> GetAnimation();
 		T_PROPERTY(FLOAT, Size, __get_Size, __set_Size, 0x11C);

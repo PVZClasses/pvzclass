@@ -528,7 +528,7 @@ extern byte __asm__Zombie_ReanimShowPrefix[29];
 
 extern byte __asm__CanDecelerate[24];
 
-extern byte __asm__Zombie_EffectedBy[26];
+extern byte __asm__Zombie_EffectedBy[29];
 
 extern byte __asm__CreateEffect[19];
 

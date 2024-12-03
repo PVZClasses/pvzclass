@@ -2,7 +2,7 @@
 
 PVZ::Zombie::Zombie(int indexoraddress)
 {
-	if (indexoraddress > 1024)
+	if (indexoraddress > 65535)
 		BaseAddress = indexoraddress;
 	else
 		BaseAddress = Memory::ReadMemory<int>(PVZBASEADDRESS + 0x90) + indexoraddress * 0x15C;
@@ -337,7 +337,7 @@ bool PVZ::Zombie::EffectedBy(DamageRangeFlags range, bool usepvzfunc)
 		SETARG(__asm__Zombie_EffectedBy, 1) = BaseAddress;
 		__asm__Zombie_EffectedBy[6] = range;
 		SETARG(__asm__Zombie_EffectedBy, 21) = Memory::Variable;
-		return(Memory::Execute(STRING(__asm__Zombie_EffectedBy)) == 1);
+		return(Memory::Execute(STRING(__asm__Zombie_EffectedBy)) != 0);
 	}
 	else
 	{

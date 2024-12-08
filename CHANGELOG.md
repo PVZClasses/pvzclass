@@ -16,6 +16,7 @@
 - `Animation` 类新增 `Type` 成员和 `SetFramesForLayer()` 成员函数。
 - `ZombieUpdateActionEvent` 事件，对应僵尸行为动作的更新。
 - `ZombieUpdatePlayingEvent` 事件，被冻结、黄油定身时也会触发的存活僵尸的更新。
+- `PlantUpdateAbilityEvent` 事件，植物技能的更新事件。
 - `Resource` 类，含有对应资源对象的静态成员变量。
   - 需要用 `InitImages()` 初始化。
 - `Matrix3` 类，用于存储一个三维矩阵。
@@ -29,15 +30,16 @@
 - `TrackInstance` 现在是 `BaseClass` 的派生类。
 - `Animation::AttachTo()` 调整了参数，使其现在可以容易地使用。
 - `PlantSquishEvent` 现在是 `DLLEvent` 的派生类。
+- `CollisionBox` 重做为 `Rect` 类，可以较方便地判定矩形覆盖。
 
 ### 移除内容
 
 - `CT` 文件夹。
-- 枚举 `CardType` 和 `PlantType`。它们被合并到 `SeedType` 中。
+- 枚举 `CardType` 和 `PlantType`。它们现在是 `SeedType` 的别名。
 
 ### 兼容性
 
-- 由于 Enum 方面的改动，不兼容 1.16.x。
+- 由于 Enum 方面的改动，可能出现不兼容 1.16.x 的情况。如果在测试中遇到相关问题，请在 issue 汇报。
 
 ## 1.16.2（2024/10/19）
 

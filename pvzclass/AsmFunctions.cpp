@@ -177,15 +177,6 @@ byte __asm__CanDecelerate[]
 	RET
 };
 
-byte __asm__Zombie_EffectedBy[]
-{
-	MOV_ESI(0),
-	ZOMBIE_EFFECTEDBY,
-	AND_EUX(REG_EAX,1),
-	MOV_PTR_ADDR_EAX(0),
-	RET
-};
-
 byte __asm__CreateEffect[]
 {
 	CREATEEFFECT,

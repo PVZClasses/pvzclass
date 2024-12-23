@@ -41,6 +41,7 @@
 
 #include "CalcSunCostEvent.hpp"
 #include "PlantDoSpecialEvent.hpp"
+#include "PlantMouseDownEvent.hpp"
 #include "PlantSquishEvent.h"
 #include "GriditemUpdateEvent.hpp"
 #include "ZombieInitAfterEvent.hpp"

@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "Enums/PlantType.h"
+#include "Enums/SeedType.h"
 #include "PVZ.h"
 #include <vector>
 #include <stack>
@@ -9,32 +9,32 @@ namespace Utils
 	typedef PVZ::Memory Memory;
 #define Read(x) (Memory::ReadMemory<int>(x))
 #define Write(x,y) (Memory::WriteMemory<int>(x,y))
-	inline int GetPlantCost(PlantType::PlantType type)
+	inline int GetPlantCost(SeedType::SeedType type)
 	{
 		int address = 0x69F2C0 + 0x24 * type;
 		return Read(address);
 	}
-	inline void SetPlantCost(PlantType::PlantType type, int cost)
+	inline void SetPlantCost(SeedType::SeedType type, int cost)
 	{
 		int address = 0x69F2C0 + 0x24 * type;
 		Write(address, cost);
 	}
-	inline int GetPlantCooldown(PlantType::PlantType type)
+	inline int GetPlantCooldown(SeedType::SeedType type)
 	{
 		int address = 0x69F2C4 + 0x24 * type;
 		return Read(address);
 	}
-	inline void SetPlantCooldown(PlantType::PlantType type, int cooldown)
+	inline void SetPlantCooldown(SeedType::SeedType type, int cooldown)
 	{
 		int address = 0x69F2C4 + 0x24 * type;
 		Write(address, cooldown);
 	}
-	inline int GetPlantSpeed(PlantType::PlantType type)
+	inline int GetPlantSpeed(SeedType::SeedType type)
 	{
 		int address = 0x69F2CC + 0x24 * type;
 		return Read(address);
 	}
-	inline void SetPlantSpeed(PlantType::PlantType type, int speed)
+	inline void SetPlantSpeed(SeedType::SeedType type, int speed)
 	{
 		int address = 0x69F2CC + 0x24 * type;
 		Write(address, speed);

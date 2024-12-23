@@ -28,8 +28,8 @@ void PVZ::CardSlot::SeedCard::EnterCoolDown(int duration)
 {
 	if (duration == -1)
 	{
-		PlantType::PlantType type = (PlantType::PlantType)ContentCard;
-		if (type == PlantType::Imitater) type = (PlantType::PlantType)ContentCardImitative;
+		SeedType::SeedType type = (SeedType::SeedType)ContentCard;
+		if (type == SeedType::Imitater) type = (SeedType::SeedType)ContentCardImitative;
 		duration = Memory::ReadMemory<int>(0x69F2C4 + 0x24 * type);
 	}
 	Enable = false;

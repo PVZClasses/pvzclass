@@ -60,10 +60,10 @@ byte __asm__CreatePlant[35]
 	RET,
 };
 
-SPT<PVZ::Plant> Creator::CreatePlant(PlantType::PlantType type, int row, byte column, BOOLEAN imitative)
+SPT<PVZ::Plant> Creator::CreatePlant(SeedType::SeedType type, int row, byte column, BOOLEAN imitative)
 {
 	if (imitative)__asm__CreatePlant[6] = type;
-	__asm__CreatePlant[8] = imitative ? PlantType::Imitater : type;
+	__asm__CreatePlant[8] = imitative ? SeedType::Imitater : type;
 	__asm__CreatePlant[10] = column;
 	SETARG(__asm__CreatePlant, 1) = row;
 	SETARG(__asm__CreatePlant, 12) = PVZBASEADDRESS;
@@ -202,7 +202,7 @@ void Creator::ResetLawnmover()
 	PVZ::Memory::WriteMemory<byte>(0x40BD17, 1);
 	SETARG(__asm__ResetLawnmover, 1) = PVZBASEADDRESS;
 	auto lawnmovers = PVZ::GetBoard()->GetAllLawnmovers();
-	for (int i = 0; i < lawnmovers.size(); i++)
+	for (DWORD i = 0; i < lawnmovers.size(); i++)
 		lawnmovers[i]->Die();
 	PVZ::Memory::Execute(STRING(__asm__ResetLawnmover));
 	PVZ::Memory::WriteMemory<float>(0x679BF8, -160.0f);
@@ -278,7 +278,7 @@ SPT<PVZ::Griditem> Creator::CreateLadder(int row, byte column)
 	return MKS<PVZ::Griditem>(PVZ::Memory::Execute(STRING(__asm__CreateLadder)));
 }
 
-SPT<PVZ::Vase> Creator::CreateVase(int row, int column, VaseContent::VaseContent content, VaseSkin::VaseSkin skin, ZombieType::ZombieType zombie, PlantType::PlantType plant, int sun)
+SPT<PVZ::Vase> Creator::CreateVase(int row, int column, VaseContent::VaseContent content, VaseSkin::VaseSkin skin, ZombieType::ZombieType zombie, SeedType::SeedType plant, int sun)
 {
 	SPT<PVZ::Vase> vase = MKS<PVZ::Vase>(CreateGriditem()->GetBaseAddress());
 	vase->Row = row;
@@ -559,7 +559,7 @@ byte __asm__CreatePortal[19]
 void Creator::__CreatePortal()
 {
 	auto griditems = PVZ::GetBoard()->GetAllGriditems();
-	for (int i = 0; i < griditems.size(); i++)
+	for (DWORD i = 0; i < griditems.size(); i++)
 		if (griditems[i]->Type == GriditemType::PortalBlue || griditems[i]->Type == GriditemType::PortalYellow)
 			griditems[i]->Remove();
 	SETARG(__asm__CreatePortal, 1) = PVZ::Memory::ReadMemory<int>(PVZBASEADDRESS + 0x160);

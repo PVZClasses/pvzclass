@@ -24,9 +24,9 @@ void PVZ::SaveData::SetPurchase(StoreItem::StoreItem item, int val)
 	Memory::WriteMemory<int>(BaseAddress + 0x1C0 + item * 4, val);
 }
 
-BOOLEAN PVZ::SaveData::HavePurpleCard(CardType::CardType purplecard)
+BOOLEAN PVZ::SaveData::HavePurpleCard(SeedType::SeedType purplecard)
 {
-	if (purplecard >= CardType::GatlingPea && purplecard <= CardType::CobCannon)
+	if (purplecard >= SeedType::GatlingPea && purplecard <= SeedType::CobCannon)
 		return Memory::ReadMemory<int>(BaseAddress + 0x1C0 + (purplecard - 40) * 4);
 	return false;
 }

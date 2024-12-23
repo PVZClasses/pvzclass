@@ -115,7 +115,7 @@ namespace Const
 		return((SceneType::SceneType)num);
 	}
 
-	//@brief 设置指定关卡的初始场景类型。不支持冒险模式，无法设定为蘑菇圆场景。
+	//@brief 设置指定关卡的初始场景类型。不支持冒险模式，无法设定为蘑菇园场景。
 	//@param mode 关卡类型。
 	//@param type 设定的场景类型。
 	//@return 是否设置成功。

@@ -40,6 +40,15 @@
     <Filter Include="头文件\Enums\PlayerInfo">
       <UniqueIdentifier>{03cd7358-fb6c-4544-b46e-edd1948aa82e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Enums\Zombie">
+      <UniqueIdentifier>{b9d6e170-1928-45a6-bea9-de629fc47697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Events\Zombie">
+      <UniqueIdentifier>{fbcdc89d-f37a-485c-a126-79bd99444fbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Events\Plant">
+      <UniqueIdentifier>{a01de3c0-76ec-4877-8db8-fe672099eb46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -66,7 +75,7 @@
     <ClCompile Include="Enums\VaseSkin.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
-    <ClCompile Include="Enums\ZombieAccessoriesType1.cpp">
+    <ClCompile Include="Enums\HelmType.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
     <ClCompile Include="Enums\ZombieAccessoriesType2.cpp">
@@ -91,9 +100,6 @@
       <Filter>源文件\Enums</Filter>
     </ClCompile>
     <ClCompile Include="Enums\ProjectileType.cpp">
-      <Filter>源文件\Enums</Filter>
-    </ClCompile>
-    <ClCompile Include="Enums\PlantType.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
     <ClCompile Include="Enums\PlantState.cpp">
@@ -129,7 +135,7 @@
     <ClCompile Include="Enums\GardenPlantState.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
-    <ClCompile Include="Enums\CardType.cpp">
+    <ClCompile Include="Enums\SeedType.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
     <ClCompile Include="Enums\CoinMotionType.cpp">
@@ -166,9 +172,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Events\VaseOpenEvent.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Events\PlantSquishEvent.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Events\ImitaterPlantEvent.cpp">
@@ -285,6 +288,15 @@
     <ClCompile Include="Enums\MagnetItemType.cpp">
       <Filter>源文件\Enums</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\AttachEffect.cpp">
+      <Filter>源文件\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Matrix3.cpp">
+      <Filter>源文件\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Rect.cpp">
+      <Filter>源文件\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProcessOpener.h">
@@ -320,7 +332,7 @@
     <ClInclude Include="Enums\CoinMotionType.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Enums\CardType.h">
+    <ClInclude Include="Enums\SeedType.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Enums\CoinType.h">
@@ -380,9 +392,6 @@
     <ClInclude Include="Enums\ZombieAccessoriesType2.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Enums\ZombieAccessoriesType1.h">
-      <Filter>头文件\Enums</Filter>
-    </ClInclude>
     <ClInclude Include="Enums\VaseSkin.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
@@ -405,9 +414,6 @@
       <Filter>头文件\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Enums\ProjectileType.h">
-      <Filter>头文件\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="Enums\PlantType.h">
       <Filter>头文件\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Enums\PlantState.h">
@@ -485,13 +491,10 @@
     <ClInclude Include="Events\PlantReloadEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Events\PlantRemoveEvent.h">
+    <ClInclude Include="Events\PlantDieEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
     <ClInclude Include="Events\PlantShootEvent.h">
-      <Filter>头文件\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="Events\PlantSquishEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
     <ClInclude Include="Events\ProjectileCreateEvent.h">
@@ -530,7 +533,7 @@
     <ClInclude Include="Events\ZombieFrozeEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Events\ZombieHitEvent.h">
+    <ClInclude Include="Events\ZombieTakeDmgEvent.h">
       <Filter>头文件\Events</Filter>
     </ClInclude>
     <ClInclude Include="Events\ZombieHypnotizeEvent.h">
@@ -601,6 +604,39 @@
     </ClInclude>
     <ClInclude Include="Enums\StoreItem.hpp">
       <Filter>头文件\Enums\PlayerInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums\HelmType.h">
+      <Filter>头文件\Enums\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieUpdateActionEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieUpdatePlayingEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantDoSpecialEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantSquishEvent.h">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\GriditemUpdateEvent.hpp">
+      <Filter>头文件\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieInitAfterEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\IZInitAfterBrainEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieDropLootEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\CalcSunCostEvent.hpp">
+      <Filter>头文件\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantUpdateAbilityEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

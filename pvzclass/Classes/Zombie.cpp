@@ -2,7 +2,7 @@
 
 PVZ::Zombie::Zombie(int indexoraddress)
 {
-	if (indexoraddress > 1024)
+	if (indexoraddress > 65535)
 		BaseAddress = indexoraddress;
 	else
 		BaseAddress = Memory::ReadMemory<int>(PVZBASEADDRESS + 0x90) + indexoraddress * 0x15C;
@@ -115,7 +115,7 @@ void PVZ::Zombie::SetAttackCollision(CollisionBox* collbox)
 PVZ::Zombie::AccessoriesType1 PVZ::Zombie::GetAccessoriesType1()
 {
 	AccessoriesType1 acctype1;
-	acctype1.Type = Memory::ReadMemory<ZombieAccessoriesType1::ZombieAccessoriesType1>(BaseAddress + 0xC4);
+	acctype1.Type = Memory::ReadMemory<HelmType::HelmType>(BaseAddress + 0xC4);
 	acctype1.Hp = Memory::ReadMemory<int>(BaseAddress + 0xD0);
 	acctype1.MaxHp = Memory::ReadMemory<int>(BaseAddress + 0xD4);
 	return acctype1;
@@ -123,7 +123,7 @@ PVZ::Zombie::AccessoriesType1 PVZ::Zombie::GetAccessoriesType1()
 
 void PVZ::Zombie::SetAccessoriesType1(AccessoriesType1 acctype1)
 {
-	Memory::WriteMemory<ZombieAccessoriesType1::ZombieAccessoriesType1>(BaseAddress + 0xC4, acctype1.Type);
+	Memory::WriteMemory<HelmType::HelmType>(BaseAddress + 0xC4, acctype1.Type);
 	Memory::WriteMemory<int>(BaseAddress + 0xD0, acctype1.Hp);
 	Memory::WriteMemory<int>(BaseAddress + 0xD4, acctype1.MaxHp);
 }
@@ -272,7 +272,7 @@ void PVZ::Zombie::EquipBucket(int shield)
 	if (this->GetAccessoriesType1().Type)
 		return;
 	this->GetAnimation()->AssignRenderGroupToPrefix(0, "anim_bucket");
-	this->SetAccessoriesType1({ ZombieAccessoriesType1::Bucket, shield, shield });
+	this->SetAccessoriesType1({ HelmType::Bucket, shield, shield });
 }
 
 void PVZ::Zombie::EquipCone(int shield)
@@ -280,7 +280,7 @@ void PVZ::Zombie::EquipCone(int shield)
 	if (this->GetAccessoriesType1().Type)
 		return;
 	this->GetAnimation()->AssignRenderGroupToPrefix(0, "anim_cone");
-	this->SetAccessoriesType1({ ZombieAccessoriesType1::RoadCone, shield, shield });
+	this->SetAccessoriesType1({ HelmType::RoadCone, shield, shield });
 }
 
 void PVZ::Zombie::ReanimShowPrefix(const char* TrackName, int renderGroup)
@@ -330,14 +330,23 @@ bool PVZ::Zombie::canFroze()
 	return(true);
 }
 
+byte __asm__Zombie_EffectedBy[]
+{
+	MOV_ESI(0),
+	ZOMBIE_EFFECTEDBY,
+	AND_EUX(REG_EAX,1),
+	MOV_PTR_ADDR_EAX(0),
+	RET
+};
+
 bool PVZ::Zombie::EffectedBy(DamageRangeFlags range, bool usepvzfunc)
 {
 	if (usepvzfunc)
 	{
 		SETARG(__asm__Zombie_EffectedBy, 1) = BaseAddress;
 		__asm__Zombie_EffectedBy[6] = range;
-		SETARG(__asm__Zombie_EffectedBy, 21) = Memory::Variable;
-		return(Memory::Execute(STRING(__asm__Zombie_EffectedBy)) == 1);
+		SETARG(__asm__Zombie_EffectedBy, 24) = Memory::Variable;
+		return(Memory::Execute(STRING(__asm__Zombie_EffectedBy)) != 0);
 	}
 	else
 	{

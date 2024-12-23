@@ -1,6 +1,6 @@
 #include "../PVZ.h"
 
-PVZ::PlantDefinition::PlantDefinition(PlantType::PlantType type)
+PVZ::PlantDefinition::PlantDefinition(SeedType::SeedType type)
 {
 	BaseAddress = 0x69F2B0 + 0x24 * type;
 }

@@ -1,8 +1,8 @@
 ﻿#pragma once
-namespace CardType
+namespace SeedType
 {
 
-	enum CardType
+	enum SeedType
 	{
 		None = -1,
 		Peashooter,
@@ -81,6 +81,9 @@ namespace CardType
 		Imp,
 	};
 
-	extern const char* ToString(CardType cardt);
+	extern const char* ToString(SeedType cardt);
 
 }
+
+#define CardType SeedType
+#define PlantType SeedType

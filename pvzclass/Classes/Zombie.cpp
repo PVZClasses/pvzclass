@@ -330,13 +330,22 @@ bool PVZ::Zombie::canFroze()
 	return(true);
 }
 
+byte __asm__Zombie_EffectedBy[]
+{
+	MOV_ESI(0),
+	ZOMBIE_EFFECTEDBY,
+	AND_EUX(REG_EAX,1),
+	MOV_PTR_ADDR_EAX(0),
+	RET
+};
+
 bool PVZ::Zombie::EffectedBy(DamageRangeFlags range, bool usepvzfunc)
 {
 	if (usepvzfunc)
 	{
 		SETARG(__asm__Zombie_EffectedBy, 1) = BaseAddress;
 		__asm__Zombie_EffectedBy[6] = range;
-		SETARG(__asm__Zombie_EffectedBy, 21) = Memory::Variable;
+		SETARG(__asm__Zombie_EffectedBy, 24) = Memory::Variable;
 		return(Memory::Execute(STRING(__asm__Zombie_EffectedBy)) != 0);
 	}
 	else

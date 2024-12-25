@@ -49,6 +49,9 @@
     <Filter Include="头文件\Events\Plant">
       <UniqueIdentifier>{a01de3c0-76ec-4877-8db8-fe672099eb46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Enums\Sexy">
+      <UniqueIdentifier>{0292f210-c0f0-42c1-85cb-f5e9a21fc3ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -643,6 +646,9 @@
     </ClInclude>
     <ClInclude Include="Events\BoardKeyDownEvent.hpp">
       <Filter>头文件\Events\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums\KeyCode.hpp">
+      <Filter>头文件\Enums\Sexy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -39,6 +39,7 @@
 #include "ZombieUpdateActionEvent.hpp"
 #include "ZombieUpdatePlayingEvent.hpp"
 
+#include "BoardKeyDownEvent.hpp"
 #include "CalcSunCostEvent.hpp"
 #include "PlantDoSpecialEvent.hpp"
 #include "PlantMouseDownEvent.hpp"

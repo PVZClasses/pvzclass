@@ -641,5 +641,8 @@
     <ClInclude Include="Events\PlantMouseDownEvent.hpp">
       <Filter>头文件\Events\Plant</Filter>
     </ClInclude>
+    <ClInclude Include="Events\BoardKeyDownEvent.hpp">
+      <Filter>头文件\Events\Board</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

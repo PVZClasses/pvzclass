@@ -650,5 +650,8 @@
     <ClInclude Include="Enums\KeyCode.hpp">
       <Filter>头文件\Enums\Sexy</Filter>
     </ClInclude>
+    <ClInclude Include="Events\PlantEatenEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

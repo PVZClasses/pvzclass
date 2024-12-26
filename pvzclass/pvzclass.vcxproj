@@ -273,6 +273,7 @@
     <ClInclude Include="Events\LawnmowerStartEvent.hpp" />
     <ClInclude Include="Events\NewGameEvent.h" />
     <ClInclude Include="Events\PlantDoSpecialEvent.hpp" />
+    <ClInclude Include="Events\PlantEatenEvent.hpp" />
     <ClInclude Include="Events\PlantMouseDownEvent.hpp" />
     <ClInclude Include="Events\PlantSquishEvent.h" />
     <ClInclude Include="Events\PlantUpdateAbilityEvent.hpp" />

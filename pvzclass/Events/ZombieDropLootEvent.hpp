@@ -2,7 +2,7 @@
 #include "DLLEvent.h"
 
 // 僵尸掉落物品事件。
-// 已掉尝试落过物品的僵尸不会再次掉落物品。
+// 已尝试掉落过物品的僵尸不会再次掉落物品。
 // 参数：掉落物品的僵尸的地址
 // 无返回值
 class ZombieDropLootEvent : public DLLEvent

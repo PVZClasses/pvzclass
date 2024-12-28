@@ -49,4 +49,5 @@
 #include "GriditemUpdateEvent.hpp"
 #include "ZombieInitAfterEvent.hpp"
 #include "IZInitAfterBrainEvent.hpp"
+#include "ZombieDropHeadEvent.hpp"
 #include "ZombieDropLootEvent.hpp"

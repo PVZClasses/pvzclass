@@ -656,5 +656,8 @@
     <ClInclude Include="Events\PlantAddProjectileEvent.hpp">
       <Filter>头文件\Events\Plant</Filter>
     </ClInclude>
+    <ClInclude Include="Events\ZombieDropHeadEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

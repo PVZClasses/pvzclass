@@ -55,6 +55,9 @@
     <Filter Include="头文件\Events\Coin">
       <UniqueIdentifier>{90520178-935f-43cd-a96a-2541695f89fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\SeedPacket">
+      <UniqueIdentifier>{709a7841-5641-4a25-8e23-12fe9e7577b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -661,6 +664,9 @@
     </ClInclude>
     <ClInclude Include="Events\CoinMouseDownEvent.hpp">
       <Filter>头文件\Events\Coin</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\SeedPacketMouseDownEvent.hpp">
+      <Filter>头文件\Events\SeedPacket</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

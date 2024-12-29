@@ -47,6 +47,7 @@
 #include "PlantEatenEvent.hpp"
 #include "PlantMouseDownEvent.hpp"
 #include "PlantSquishEvent.h"
+#include "SeedPacketMouseDownEvent.hpp"
 #include "GriditemUpdateEvent.hpp"
 #include "ZombieInitAfterEvent.hpp"
 #include "IZInitAfterBrainEvent.hpp"

@@ -41,6 +41,7 @@
 
 #include "BoardKeyDownEvent.hpp"
 #include "CalcSunCostEvent.hpp"
+#include "CoinMouseDownEvent.hpp"
 #include "PlantAddProjectileEvent.hpp"
 #include "PlantDoSpecialEvent.hpp"
 #include "PlantEatenEvent.hpp"

@@ -52,6 +52,9 @@
     <Filter Include="头文件\Enums\Sexy">
       <UniqueIdentifier>{0292f210-c0f0-42c1-85cb-f5e9a21fc3ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Coin">
+      <UniqueIdentifier>{90520178-935f-43cd-a96a-2541695f89fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -655,6 +658,9 @@
     </ClInclude>
     <ClInclude Include="Events\ZombieDropHeadEvent.hpp">
       <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\CoinMouseDownEvent.hpp">
+      <Filter>头文件\Events\Coin</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

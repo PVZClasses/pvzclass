@@ -668,5 +668,8 @@
     <ClInclude Include="Events\SeedPacketMouseDownEvent.hpp">
       <Filter>头文件\Events\SeedPacket</Filter>
     </ClInclude>
+    <ClInclude Include="Events\VaseBreakerPopulateEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

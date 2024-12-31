@@ -271,6 +271,7 @@
     <ClInclude Include="Events\IZLevelStartAfterEvent.hpp" />
     <ClInclude Include="Events\IZScoreBrainEvent.hpp" />
     <ClInclude Include="Events\LawnmowerStartEvent.hpp" />
+    <ClInclude Include="Events\LawnmowerUpdateEvent.hpp" />
     <ClInclude Include="Events\NewGameEvent.h" />
     <ClInclude Include="Events\PlantAddProjectileEvent.hpp" />
     <ClInclude Include="Events\PlantDieLowHealthEvent.hpp" />

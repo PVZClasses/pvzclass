@@ -677,5 +677,8 @@
     <ClInclude Include="Events\PlantStolenEvent.hpp">
       <Filter>头文件\Events\Plant</Filter>
     </ClInclude>
+    <ClInclude Include="Events\LawnmowerUpdateEvent.hpp">
+      <Filter>头文件\Events\Lawnmower</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

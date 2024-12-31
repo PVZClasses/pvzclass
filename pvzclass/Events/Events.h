@@ -48,6 +48,7 @@
 #include "PlantEatenEvent.hpp"
 #include "PlantMouseDownEvent.hpp"
 #include "PlantSquishEvent.h"
+#include "PlantStolenEvent.hpp"
 #include "SeedPacketMouseDownEvent.hpp"
 #include "VaseBreakerPopulateEvent.hpp"
 #include "GriditemUpdateEvent.hpp"

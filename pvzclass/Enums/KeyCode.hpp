@@ -44,7 +44,7 @@ namespace KeyCode
 		EXECUTE,
 		SNAPSHOT,
 		INSERT,
-		DELETE,
+		CODE_DELETE,
 		HELP,
 		ASCIIBEGIN,
 		ASCIIEND	= 0x5A,

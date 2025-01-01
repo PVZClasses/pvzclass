@@ -686,5 +686,8 @@
     <ClInclude Include="Events\GriditemDieEvent.hpp">
       <Filter>头文件\Events\Griditem</Filter>
     </ClInclude>
+    <ClInclude Include="Events\ChallengeInitAfterEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

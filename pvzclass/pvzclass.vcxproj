@@ -251,6 +251,7 @@
     <ClInclude Include="Events\BoardKeyDownEvent.hpp" />
     <ClInclude Include="Events\BoardUpdateGameEvent.hpp" />
     <ClInclude Include="Events\CalcSunCostEvent.hpp" />
+    <ClInclude Include="Events\ChallengeInitAfterEvent.hpp" />
     <ClInclude Include="Events\CoinMouseDownEvent.hpp" />
     <ClInclude Include="Events\DrawPlantReanimEvent.h" />
     <ClInclude Include="Events\DrawZombieReanimEvent.h" />

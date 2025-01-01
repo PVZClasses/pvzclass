@@ -58,6 +58,9 @@
     <Filter Include="头文件\Events\SeedPacket">
       <UniqueIdentifier>{709a7841-5641-4a25-8e23-12fe9e7577b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Griditem">
+      <UniqueIdentifier>{9441737e-2a93-45c3-be55-a2669a8d3a2f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -679,6 +682,9 @@
     </ClInclude>
     <ClInclude Include="Events\LawnmowerUpdateEvent.hpp">
       <Filter>头文件\Events\Lawnmower</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\GriditemDieEvent.hpp">
+      <Filter>头文件\Events\Griditem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

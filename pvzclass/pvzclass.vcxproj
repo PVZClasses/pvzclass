@@ -265,6 +265,7 @@
     <ClInclude Include="Events\DialogDrawEvent.h" />
     <ClInclude Include="Events\DLLEvent.h" />
     <ClInclude Include="Events\Events.h" />
+    <ClInclude Include="Events\GriditemDieEvent.hpp" />
     <ClInclude Include="Events\GriditemUpdateEvent.hpp" />
     <ClInclude Include="Events\IZInitAfterBrainEvent.hpp" />
     <ClInclude Include="Events\IZLevelCompleteEvent.hpp" />

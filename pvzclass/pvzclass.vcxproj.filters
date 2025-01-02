@@ -689,5 +689,8 @@
     <ClInclude Include="Events\ChallengeInitAfterEvent.hpp">
       <Filter>头文件\Events\Challenge</Filter>
     </ClInclude>
+    <ClInclude Include="Events\ChallengeUpdateEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

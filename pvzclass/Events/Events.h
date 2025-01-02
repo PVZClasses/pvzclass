@@ -39,6 +39,7 @@
 #include "ZombieUpdateActionEvent.hpp"
 #include "ZombieUpdatePlayingEvent.hpp"
 
+#include "BegTwistFailMoveEvent.hpp"
 #include "BoardKeyDownEvent.hpp"
 #include "CalcSunCostEvent.hpp"
 #include "ChallengeInitAfterEvent.hpp"

@@ -248,6 +248,7 @@
     <ClInclude Include="Draw.h" />
     <ClInclude Include="Enums\KeyCode.hpp" />
     <ClInclude Include="Enums\StoreItem.hpp" />
+    <ClInclude Include="Events\BegTwistFailMoveEvent.hpp" />
     <ClInclude Include="Events\BoardKeyDownEvent.hpp" />
     <ClInclude Include="Events\BoardUpdateGameEvent.hpp" />
     <ClInclude Include="Events\CalcSunCostEvent.hpp" />

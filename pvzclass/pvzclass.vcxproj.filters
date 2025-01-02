@@ -61,6 +61,9 @@
     <Filter Include="头文件\Events\Griditem">
       <UniqueIdentifier>{9441737e-2a93-45c3-be55-a2669a8d3a2f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Events\Challenge\Beghouled">
+      <UniqueIdentifier>{65db0b32-c981-4a4f-9dda-b600df1b32ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -691,6 +694,9 @@
     </ClInclude>
     <ClInclude Include="Events\ChallengeUpdateEvent.hpp">
       <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\BegTwistFailMoveEvent.hpp">
+      <Filter>头文件\Events\Challenge\Beghouled</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -698,5 +698,8 @@
     <ClInclude Include="Events\BegTwistFailMoveEvent.hpp">
       <Filter>头文件\Events\Challenge\Beghouled</Filter>
     </ClInclude>
+    <ClInclude Include="Events\PlantShoveledEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

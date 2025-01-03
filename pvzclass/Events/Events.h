@@ -51,6 +51,7 @@
 #include "PlantDoSpecialEvent.hpp"
 #include "PlantEatenEvent.hpp"
 #include "PlantMouseDownEvent.hpp"
+#include "PlantShoveledEvent.hpp"
 #include "PlantSquishEvent.h"
 #include "PlantStolenEvent.hpp"
 #include "LawnmowerUpdateEvent.hpp"

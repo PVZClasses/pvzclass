@@ -62,3 +62,4 @@
 #include "IZInitAfterBrainEvent.hpp"
 #include "ZombieDropHeadEvent.hpp"
 #include "ZombieDropLootEvent.hpp"
+#include "ZombieEatSoundEvent.hpp"

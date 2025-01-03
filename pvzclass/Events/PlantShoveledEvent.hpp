@@ -14,7 +14,7 @@ PlantShoveledEvent::PlantShoveledEvent()
 {
 	int procAddress = PVZ::Memory::GetProcAddress("onPlantShoveled");
 	hookAddress = 0x4111C8;
-	rawlen = 5;
+	rawlen = 6;
 	BYTE code[] =
 	{
 		PUSH_EBP,

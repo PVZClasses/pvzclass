@@ -1,5 +1,6 @@
 # TOC
-- [1.17.1（TBD）](#1.17.1)
+- [1.17.2（TBD）](#1.17.2)
+- [1.17.1](#1.17.1（2025/1/4）)
 - [1.17](#1.17（2024/12/23）)
 - [1.16.2](#1.16.2（2024/10/19）)
 - [1.16.1](#1.16.1（2024/10/2）)
@@ -10,7 +11,7 @@
 - [1.15.0](#1.15.0（2023/10/27）)
 - [1.14.3](#1.14.3（2023/10/22）)
 
-## 1.17.1
+## 1.17.2
 
 ### 改动
 
@@ -19,6 +20,44 @@
 ### 兼容性
 
 兼容 1.17.x 。
+
+## 1.17.1（2025/1/4）
+
+### 新增内容
+
+- `PlantMouseDownEvent`，处理植物被鼠标点击的事件。
+- `BoardKeyDownEvent`，处理游戏内键盘按键的事件。
+- `KeyCode` 枚举，存储按键类型。
+- `PlantEatenEvent`，处理植物被啃食完毕的事件。
+- `PlantAddProjectileEvent`，处理植物（不含杨桃）生成子弹的事件。
+- `ZombieDropLootEvent`，处理僵尸掉落物品的事件。
+- `CoinMouseDownEvent`，处理物品被鼠标点击的事件。
+- `SeedPacketMouseDownEvent`，处理卡槽卡片被鼠标点击的事件。
+- `VaseBreakerPopulateEvent`，处理砸罐模式生成罐子的事件。
+- `PlantDieLowHealthEvent`，处理植物因低生命值被移除的事件。
+- `PlantStolenEvent`，处理植物被偷走的事件。
+- `LawnmowerUpdateEvent`，处理小推车更新的事件。
+- `GriditemDieEvent`，处理场地物件被清除的事件。
+- `ChallengeInitAfterEvent`，处理小游戏关卡初始化的事件。
+- `ChallengeUpdateEvent`，处理小游戏特性更新的事件。
+- `BegTwistFailMoveEvent`，处理宝石迷阵转转看中失配移动的事件。
+- `PlantShoveledEvent`，处理植物被铲除的事件。
+- `ZombieEatSoundEvent `，处理僵尸生成啃食音效的事件。
+- `PlantProduceEvent`，处理植物产生物品的事件。
+- `ZombieBurntEvent`，处理僵尸受到灰烬伤害的事件。
+
+### 改动
+
+- 现在`VaseOpenEvent` 是 `DLLEvent` 的派生类。
+- 修复了 `ARRAY_PROPERTY ` 导致编译错误的漏洞。
+
+### 移除内容
+
+- 移除了 `LICENSE` 中的 Lazuplis-Mei 。
+
+### 兼容性
+
+- 基本兼容 1.17 。
 
 ## 1.17（2024/12/23）
 

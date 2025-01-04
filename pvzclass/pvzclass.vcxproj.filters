@@ -49,6 +49,21 @@
     <Filter Include="头文件\Events\Plant">
       <UniqueIdentifier>{a01de3c0-76ec-4877-8db8-fe672099eb46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Enums\Sexy">
+      <UniqueIdentifier>{0292f210-c0f0-42c1-85cb-f5e9a21fc3ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Events\Coin">
+      <UniqueIdentifier>{90520178-935f-43cd-a96a-2541695f89fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Events\SeedPacket">
+      <UniqueIdentifier>{709a7841-5641-4a25-8e23-12fe9e7577b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Events\Griditem">
+      <UniqueIdentifier>{9441737e-2a93-45c3-be55-a2669a8d3a2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Events\Challenge\Beghouled">
+      <UniqueIdentifier>{65db0b32-c981-4a4f-9dda-b600df1b32ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pvzclass.cpp">
@@ -169,9 +184,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Events\EventHandler.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Events\VaseOpenEvent.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Events\ImitaterPlantEvent.cpp">
@@ -637,6 +649,66 @@
     </ClInclude>
     <ClInclude Include="Events\PlantUpdateAbilityEvent.hpp">
       <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantMouseDownEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\BoardKeyDownEvent.hpp">
+      <Filter>头文件\Events\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums\KeyCode.hpp">
+      <Filter>头文件\Enums\Sexy</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantEatenEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantAddProjectileEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieDropHeadEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\CoinMouseDownEvent.hpp">
+      <Filter>头文件\Events\Coin</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\SeedPacketMouseDownEvent.hpp">
+      <Filter>头文件\Events\SeedPacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\VaseBreakerPopulateEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantDieLowHealthEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantStolenEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\LawnmowerUpdateEvent.hpp">
+      <Filter>头文件\Events\Lawnmower</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\GriditemDieEvent.hpp">
+      <Filter>头文件\Events\Griditem</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ChallengeInitAfterEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ChallengeUpdateEvent.hpp">
+      <Filter>头文件\Events\Challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\BegTwistFailMoveEvent.hpp">
+      <Filter>头文件\Events\Challenge\Beghouled</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantShoveledEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieEatSoundEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PlantProduceEvent.hpp">
+      <Filter>头文件\Events\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\ZombieBurntEvent.hpp">
+      <Filter>头文件\Events\Zombie</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

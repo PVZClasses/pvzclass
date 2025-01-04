@@ -282,6 +282,7 @@
     <ClInclude Include="Events\PlantDoSpecialEvent.hpp" />
     <ClInclude Include="Events\PlantEatenEvent.hpp" />
     <ClInclude Include="Events\PlantMouseDownEvent.hpp" />
+    <ClInclude Include="Events\PlantProduceEvent.hpp" />
     <ClInclude Include="Events\PlantShoveledEvent.hpp" />
     <ClInclude Include="Events\PlantSquishEvent.h" />
     <ClInclude Include="Events\PlantStolenEvent.hpp" />

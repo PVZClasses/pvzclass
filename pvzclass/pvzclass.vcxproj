@@ -294,6 +294,7 @@
     <ClInclude Include="Events\PuzzlePhaseCompleteEvent.hpp" />
     <ClInclude Include="Events\UpdateAppEvent.h" />
     <ClInclude Include="Events\VaseBreakerPopulateEvent.hpp" />
+    <ClInclude Include="Events\ZombieBurntEvent.hpp" />
     <ClInclude Include="Events\ZombieDropHeadEvent.hpp" />
     <ClInclude Include="Events\ZombieDropLootEvent.hpp" />
     <ClInclude Include="Events\ZombieEatEvent.h" />

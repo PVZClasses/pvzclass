@@ -218,7 +218,7 @@ inline void DisableNewParticle(BOOLEAN b = true)
 // 禁用一切音效播放。
 // 不影响背景音乐。
 // 建议仅在调试和测试环境下调用此函数。
-inline void DisableSounds(BOOLEAN b = true)
+inline void DisableAllSounds(BOOLEAN b = true)
 {
 	MEMMOD_BYTE(0x554C27, JUMP, JZ);
 	MEMMOD_BYTE(0x554C57, JUMP, JZ);

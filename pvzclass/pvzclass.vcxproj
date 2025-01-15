@@ -183,6 +183,7 @@
     <ClCompile Include="Classes\Plant.cpp" />
     <ClCompile Include="Classes\PVZApp.cpp" />
     <ClCompile Include="Classes\Rect.cpp" />
+    <ClCompile Include="Classes\ResourceManager.cpp" />
     <ClCompile Include="Classes\SaveData.cpp" />
     <ClCompile Include="Classes\SeedCard.cpp" />
     <ClCompile Include="Classes\SeedChoserScreen.cpp" />
@@ -245,6 +246,7 @@
   <ItemGroup>
     <ClInclude Include="Classes\ChallengeScreen.hpp" />
     <ClInclude Include="Classes.hpp" />
+    <ClInclude Include="Classes\ResourceManager.hpp" />
     <ClInclude Include="Draw.h" />
     <ClInclude Include="Enums\KeyCode.hpp" />
     <ClInclude Include="Enums\StoreItem.hpp" />

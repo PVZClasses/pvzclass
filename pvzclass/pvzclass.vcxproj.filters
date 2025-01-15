@@ -309,6 +309,9 @@
     <ClCompile Include="Classes\Rect.cpp">
       <Filter>源文件\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\ResourceManager.cpp">
+      <Filter>源文件\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProcessOpener.h">
@@ -709,6 +712,9 @@
     </ClInclude>
     <ClInclude Include="Events\ZombieBurntEvent.hpp">
       <Filter>头文件\Events\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ResourceManager.hpp">
+      <Filter>头文件\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

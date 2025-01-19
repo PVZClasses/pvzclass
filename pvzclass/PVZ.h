@@ -777,6 +777,7 @@ namespace PVZ
 		T_PROPERTY(BOOLEAN, NotExist, __get_NotExist, __set_NotExist, 0x38);
 		INT_READONLY_PROPERTY(ExistedTime, __get_ExistedTime, 0x4C);
 		T_PROPERTY(BOOLEAN, Collected, __get_Collected, __set_Collected, 0x50);
+		INT_PROPERTY(DisappearCounter, __get_DisappearCounter, __set_DisappearCounter, 0x54);
 		T_PROPERTY(CoinType::CoinType, Type, __get_Type, __set_Type, 0x58);
 		T_PROPERTY(CoinMotionType::CoinMotionType, Motion, __get_Motion, __set_Motion, 0x5C);
 		SPT<PVZ::Attachment> GetAttachment();
